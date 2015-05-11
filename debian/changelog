@@ -1,0 +1,335 @@
+timekpr (0.3.5~ppa1~precise~ubuntu9) precise; urgency=low
+
+  * Fixed issue (reported by maarts in forums) with long usernames
+  ** using "who" instead of "w"
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Tue, 26 May 2015 09:21:17 +0200
+
+timekpr (0.3.5~ppa1~trusty~ubuntu8) trusty; urgency=low
+
+  * Trying to support 15.04
+  * Functionality changes
+  ** New method of determining logged in users (using w instead of loginctl if available, will fall back to loginctl or users in case w is not available)
+  ** Notifications will be critical all the time (they will show up in fullscreen windows all the time)
+  * Administration changes
+  ** Now it will be possible to administer timekpr using non-administrative account (using pkexec now)
+  ** It's possible to administer Timekpr from appindicator/systray menu
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Sun, 26 April 2015 15:21:17 +0200
+
+timekpr (0.3.5~ppa1~14.04~ubuntu6) trusty; urgency=low
+
+  * Translation related changes
+  ** Cleaned up non-translatable strings (like authors / GPL)
+  ** Made timekpr.pot file up-to-date so people can start translation w/o me sending them .po files
+  * Cleaned up older files / experiments
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Sun, 6 July 2014 00:53:11 +0200
+
+timekpr (0.3.5~ppa1~14.04~ubuntu5) trusty; urgency=low
+
+  * Translation related changes
+  ** Couple of translation fixes in About page
+  ** Timekpr launcher now uses translated names
+  ** German translations fixes (thanks to Kai Springstein)
+  * KeyError fixes in timekpr-gui (thanks to Frank Gerbig)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Sun, 6 July 2014 00:53:11 +0200
+
+timekpr (0.3.5~ppa1~14.04~ubuntu4) trusty; urgency=low
+
+  * Translation related changes
+  ** Modfied/simplified (from code perspective) translations
+  ** Introduced plural forms in translations
+  ** Added German translation (thanks to Kai Springstein)
+  * version fix in GUI
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Sun, 5 July 2014 20:11:39 +0200
+
+timekpr (0.3.5~ppa1~14.04~ubuntu3) trusty; urgency=low
+
+  * Translation related changes
+  ** Added Russian (myself) translation
+  * minor changes in GUI
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Sun, 21 June 2014 20:11:39 +0200
+
+timekpr (0.3.5~ppa1~14.04~ubuntu2) trusty; urgency=low
+
+  * Translation related changes
+  ** Old translations are not working, old translations dropped, info - http://ubuntuforums.org/showthread.php?t=2219675&page=2
+  ** Made all gui strings translatable (including menu and indicator/client messages)
+  ** Added Latvian, French, Finnish translations - thanks to myself (Latvian), Jean-Phillipe Lord (French) and Petja Touru (Finnish)
+  * Added MATE support - supports MDM and client for MATE DE (tested using Mint 17)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Sun, 21 June 2014 20:11:39 +0200
+
+timekpr (0.3.5~ppa1~14.04~ubuntu1) trusty; urgency=low
+
+  Indicator/client changes
+  * Added immediate notifications in case time is added to account to inform user about change asap
+  * Unified indicator and tray client into one module (new functionality are the same for both now)
+  * New icons which reflect time status
+  ** unlimited time = unlocked green
+  ** time left > 10 mins = locked green
+  ** time left < 10 mins = locked yellow
+  ** time left < 3 mins = locked red
+  * All client notifications should be translatable
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Fri, 9 May 2014 20:11:39 +0200
+
+timekpr (0.3.4~ppa1~14.04~ubuntu1) trusty; urgency=low
+
+  * Trying to support LXDM
+  * Integrate patch which initializes notification (thanks goes to SanskritFritz, ArchLinux AUR Timekpr maintainer)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Mon, 7 May 2014 20:11:39 +0200
+
+timekpr (0.3.3~ppa1~14.04~ubuntu2) trusty; urgency=low
+
+  * Adapted to work with 14.04 (no backport planned at this time, although it might work even on 12.04)
+  * Added loginctl support (will fall back to "users" in case loginctl is not present)
+  * User list is filtered against popular DM's (gdm, kdm, lxdm, lightdm)
+  * Added support for lightdm (tested only on 14.04)
+  * NEW appindicator to support ubuntu's indicators
+  * Appindicator works different from standard client, I hope - better
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Mon, 21 Mar 2014 20:11:39 +0200
+
+timekpr (0.3.2~ppa1~ubuntu2) jaunty; urgency=low
+
+  * Client includes a deafult notification for unsupported DEs (LP: #486881)
+  * Release reflects revision 194 from timekpr/stable
+
+ -- Even Nedberg <even@undertow>  Wed, 09 Dec 2009 21:15:15 +0100
+
+timekpr (0.3.1~ppa1~ubuntu6) jaunty; urgency=low
+
+  * Release reflects revision 193 from lp:timekpr/stable
+
+ -- Even Nedberg <even@undertow>  Mon, 09 Nov 2009 20:29:44 +0100
+
+timekpr (0.3.1~ppa1~ubuntu5~beta1) jaunty; urgency=low
+
+  * Fixed an error in timekpr-client.py 
+
+ -- Even Nedberg <even@undertow>  Tue, 03 Nov 2009 21:28:24 +0100
+
+timekpr (0.3.1~ppa1~ubuntu2~beta1) januty; urgency=low
+
+  * Added some files that got lost in last build
+
+ -- Even Nedberg <even@lateralus>  Sun, 01 Nov 2009 19:14:28 +0100
+
+timekpr (0.3.1~ppa1~ubuntu1~beta1) jaunty; urgency=low  
+
+  * Fixed notifications in KDE4, LP: #302774
+  * Cleaned up code for notification string (Stephen Scott)
+
+ -- Even Nedberg <even@lateralus>  Sun, 01 Nov 2009 13:22:33 +0100
+
+timekpr (0.3.0~ppa1~ubuntu1) jaunty; urgency=low
+
+  * Fixed a bug that would kick a unrestricted user who was logged in all day
+  * Release includes files from revision 221
+
+ -- Even Nedberg <even@lateralus>  Sat, 18 Apr 2009 09:24:35 +0200
+
+timekpr (0.3.0~ppa1~ubuntu1~beta4) jaunty; urgency=low
+
+  * timekpr-client will no longer display two or more notifications at the same time
+  * Added Finish translation
+
+ -- Even Nedberg <even@undertow>  Sun, 12 Apr 2009 20:09:28 +0200
+
+timekpr (0.3.0~ppa1~ubuntu1~beta3) jaunty; urgency=low
+
+  * Added manpage (LP: #302770)
+
+ -- Even Nedberg <even@undertow>  Sun, 12 Apr 2009 20:07:34 +0200
+
+timekpr (0.3.0~ppa1~intrepid1~beta2) intrepid; urgency=low
+
+  * Fixed (LP: #314061): hard reference to /etc/timekpr in timekpr-client, Properly this time
+  * Added translation, now including Danish, German, French, Hungarian, Norwegian bookmal and Swedish
+
+ -- Even Nedberg <even@undertow>  Fri, 10 Apr 2009 12:00:39 +0200
+
+timekpr (0.3.0~ppa1~intrepid1~beta1) intrepid; urgency=low
+
+  * Fixed Bug #330261: GUI fails to start if no normal users present
+  * Added i18n support to timekpr-gui and timekpr-client, Bug #302782
+  * Fixed bug #314061: hard reference to /etc/timekpr in timekpr-client
+  * Fixed Bug #344538: timekpr limitations allow maximum 14h (Fixed by Savvas)
+  * Build from revison #212
+
+ -- Even Nedberg <even@lateralus>  Thu, 09 Apr 2009 17:42:00 +0200
+
+timekpr (0.2.2~ppa1~intrepid1) intrepid; urgency=low
+
+  * .deb file now reflects revision 186
+  * timekpr-client gives less notifications, less annoying
+  * Logrotate should work now, earlier versions installed config file to wrong location
+  * Logrotate will compress old logfiles on second run
+
+ -- Even Nedberg <even@lateralus>  Wed, 24 Dec 2008 11:49:02 +0100
+
+timekpr (0.2.2~b7~ppa1~intrepid1) intrepid; urgency=low
+
+  * Fixed a bug where timekpr would crash at midnight, (LP: #307839)
+  * timekpr no longer truncates log file when it is restared. (LP: #302833)
+
+ -- Even Nedberg <even@lateralus>  Sun, 14 Dec 2008 21:02:41 +0100
+
+timekpr (0.2.2~b6~ppa1~intrepid1) intrepid; urgency=low
+
+  * Unrestricted users no longer get notified, closes: Bug#306121
+  * Logfile is kept over system reboot and timekpr restart, logfile is rotated. closes: Bug#302833
+  * Timekpr-gui shows remaining time for a restricted user. closes: Bug#302774
+  * Added option to remove time from a user, aka Penalty button. closes: Bug#302776
+
+ -- Even Nedberg <even@lateralus>  Wed, 10 Dec 2008 20:25:24 +0100
+
+timekpr (0.2.2~b5~ppa1~intrepid1) intrepid; urgency=low
+
+  * Fixed typo in timekpr.py, def logOut 
+
+ -- Even Nedberg <even@lateralus>  Fri, 05 Dec 2008 18:11:43 +0100
+
+timekpr (0.2.2~b4~ppa1~intrepid1) intrepid; urgency=low
+
+  * Fixed Bug#305055
+
+ -- Even Nedberg <even@lateralus>  Fri, 05 Dec 2008 17:11:25 +0100
+
+timekpr (0.2.2~b3) UNRELEASED; urgency=low
+
+  * Rev #149
+  * Includes timekpr-client
+  * Fix for problems reported in Bug#287012 by WNino
+  * Checks users even if /etc/timekpr/username does not exist
+
+ -- Even Nedberg <code@nedberg.net>  Thu, 20 Nov 2008 20:51:18 +0100
+
+timekpr (0.2.2~b2) UNRELEASED; urgency=low
+
+  * Rev #121
+  * Works in Ubuntu Hardy Heron 8.04.1 now (Bug #287012)
+  * Removed debian/menu, using gksu package (Bug #286527)
+  * First user with UserID == UID_MIN from login.defs is now hidden
+	from the user list (Bug #286529)
+
+ -- Savvas Radevic <vicedar@gmail.com>  Thu, 23 Oct 2008 20:51:18 +0200
+
+timekpr (0.2.2~b1) UNRELEASED; urgency=low
+
+  * Pushed version 0.2.2 (so I could set it as beta 1 release)
+  * Testing deb package
+  * Revision #111
+
+ -- Savvas Radevic <vicedar@gmail.com>  Sun, 19 Oct 2008 16:25:16 +0200
+
+timekpr (0.2.1) UNRELEASED; urgency=low
+
+  * Testing deb package
+  * Revision #110
+
+ -- Savvas Radevic <vicedar@gmail.com>  Thu, 16 Oct 2008 17:49:58 +0200
+
+timekpr (0.2.0) UNRELEASED; urgency=low
+
+  * Testing deb package
+  * Revision #108
+
+ -- Savvas Radevic <vicedar@gmail.com>  Wed, 15 Oct 2008 21:58:04 +0200
+
+timekpr (0.1.9) UNRELEASED; urgency=low
+
+  * Testing deb package
+  * Revision #106
+
+ -- Savvas Radevic <vicedar@gmail.com>  Wed, 15 Oct 2008 19:36:01 +0200
+
+timekpr (0.1.0ubuntu10) UNRELEASED; urgency=low
+
+  * Testing pythonized package install/remove/purge
+
+ -- Savvas Radevic <vicedar@gmail.com>  Sun, 28 Sep 2008 20:20:59 +0200
+
+timekpr (0.1.0ubuntu9) UNRELEASED; urgency=low
+
+  * Testing
+
+ -- Savvas Radevic <vicedar@gmail.com>  Tue, 23 Sep 2008 17:28:46 +0200
+
+timekpr (0.1.0ubuntu8) UNRELEASED; urgency=low
+
+  * Revision #30:
+  * More fixes to timekpr, kicking and locking after allowed hours also
+	when username.allow does not exist
+  * Fixed error in timekpr
+  * Changed timekpr, restricted user will be kicked out faster when
+	logging in after allowed time
+
+ -- Savvas Radevic <vicedar@gmail.com>  Sun, 21 Sep 2008 17:39:31 +0200
+
+timekpr (0.1.0ubuntu7) UNRELEASED; urgency=low
+
+  * Old timekpr: timekpr.old (not in deb package)
+  * Fixed timekpr, tested working
+  * New script to unlock a user account manually: timekpr-unlock username
+  * New logging function: logkpr 'message' - Log file: /var/log/timekpr.log
+  * New lock/unlock functions: based on usermod -e (user expiration) - Would use
+	-L to actually lock it, but it would just say 'wrong password'
+  * Tidied up timekpr
+  * New variable for lock function: lock_lasts='1 hour' 
+
+ -- Savvas Radevic <vicedar@gmail.com>  Sat, 20 Sep 2008 14:11:56 +0200
+
+timekpr (0.1.0ubuntu6) UNRELEASED; urgency=low
+
+  * Removed exclamation marks which caused problems to timekpr
+  * Cleaned up timekpr script
+
+ -- Savvas Radevic <vicedar@gmail.com>  Fri, 19 Sep 2008 23:35:45 +0200
+
+timekpr (0.1.0ubuntu5) UNRELEASED; urgency=low
+
+  * Cleaned up timekpr and timekpr-gui
+  * timekpr-gui shows users with userid within UID_MIN and UID_MAX
+  * timekpr and timekpr-gui now check and create the default
+	directory if necessary
+  * Applied possible bugfix (LP: #272142)
+
+ -- Savvas Radevic <vicedar@gmail.com>  Fri, 19 Sep 2008 19:35:41 +0200
+
+timekpr (0.1.0ubuntu4) UNRELEASED; urgency=low
+
+  * GUI: Fixed users list, removed sys and glob modules
+
+ -- Savvas Radevic <vicedar@gmail.com>  Fri, 19 Sep 2008 13:35:03 +0200
+
+timekpr (0.1.0ubuntu3) UNRELEASED; urgency=low
+
+  * Added init.d script and various changes from source
+
+ -- Savvas Radevic <vicedar@gmail.com>  Fri, 19 Sep 2008 04:56:33 +0200
+
+timekpr (0.1.0ubuntu2) UNRELEASED; urgency=low
+
+  * Changed to license GPLv3
+
+ -- Savvas Radevic <vicedar@gmail.com>  Wed, 17 Sep 2008 12:34:42 +0200
+
+timekpr (0.1.0ubuntu1) UNRELEASED; urgency=low
+
+  * Added menu shortcut
+
+ -- Savvas Radevic <vicedar@gmail.com>  Wed, 17 Sep 2008 12:11:42 +0200
+
+timekpr (0.1.0) UNRELEASED; urgency=low
+
+  * Initial Release.
+
+ -- Savvas Radevic <vicedar@gmail.com>  Wed, 17 Sep 2008 10:00:00 +0200
+

@@ -1,0 +1,30 @@
+#!/bin/sh
+afile='/etc/security/access.conf'
+tfile='/etc/security/time.conf'
+timekprwork=/var/lib/timekpr
+timekprdir=/etc/timekpr
+
+if [ "$1" = "purge" ] ; then
+  #This will clear default directories
+  if [ -d $timekprwork ] ; then
+	rm -rf $timekprwork
+  fi
+  if [ -d $timekprdir ] ; then
+	rm -rf $timekprdir
+  fi
+  #This will uncomment the commented areas and remove the lines
+  echo "Removing timekpr section from $afile"
+  sed -i -e '/^### TIMEKPR START/,/^### TIMEKPR END/ s/^#//g' $afile
+  sed -i -e '/^## TIMEKPR START/,/^## TIMEKPR END/d' $afile
+  echo "Removing timekpr section from $tfile"
+  sed -i -e '/^### TIMEKPR START/,/^### TIMEKPR END/ s/^#//g' $tfile
+  sed -i -e '/^## TIMEKPR START/,/^## TIMEKPR END/d' $tfile
+else
+  #Adds '#' in front of lines between these sections
+  echo "Disabling (comment out) $afile"
+  sed -i -e '/^## TIMEKPR START/,/^## TIMEKPR END/ s/^/#/g' $afile
+  echo "Disabling (comment out) $tfile"
+  sed -i -e '/^## TIMEKPR START/,/^## TIMEKPR END/ s/^/#/g' $tfile
+fi
+
+#DEBHELPER#

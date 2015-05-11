@@ -1,0 +1,21 @@
+This package was debianized by Savvas Radevic (medigeek)
+<vicedar@gmail.com> on Wed, 17 Sep 2008 10:00:00 +0200.
+
+It was downloaded from http://code.launchpad.net/timekpr
+
+Upstream Authors: 
+Even Nedberg <code@nedberg.net>
+Savvas Radevic <vicedar@gmail.com>
+Nicolas Laurance <nlaurance@zindep.com>
+
+Copyright:
+2008 Even Nedberg
+2008 Savvas Radevic
+2008 Nicolas Laurance
+
+All code is released under the GPLv3, see
+/usr/share/common-licenses/GPL-3
+
+With the exception of the artwork SVG source files,
+which are released to the Public Domain.
+

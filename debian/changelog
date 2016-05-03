@@ -1,3 +1,10 @@
+timekpr-beta (0.3.6~ppa1~ubuntu1) UNRELEASED; urgency=medium
+
+  * Fixed last minute bug for users.timekpr
+  * Fix clean so it won't delete my bzr repo
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
 timekpr-beta (0.3.6~ppa1~ubuntu0) UNRELEASED; urgency=medium
 
   * cleanup, build fixes & reorg for project to make it more streamlined

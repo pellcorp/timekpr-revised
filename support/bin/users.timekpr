@@ -3,7 +3,7 @@
 # this filters out only Active users using loginctl
 ACTIVE_USERS_LOGINCTL()
 (
-	loginctl list-users --no-legend | sed 's/^ \+//' | cut -d' ' -f2 | sort | uniq | \
+	loginctl list-users | sed 's/^ \+//' | cut -d' ' -f2 | sort | uniq | \
 		while read TPKR_USER;
 		do
 			if  [ "$(loginctl show-user -p State $TPKR_USER)" = "State=active" ];

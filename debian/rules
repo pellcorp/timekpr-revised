@@ -1,7 +1,6 @@
 #!/usr/bin/make -f
 
 clean:
-	rm -rf ".bzr"
 	find . -name "*.pyc" -delete
 	doc/update.sh
 	dh $@ --with python2

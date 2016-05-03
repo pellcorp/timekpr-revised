@@ -1,3 +1,10 @@
+timekpr-beta (0.3.6~ppa1~ubuntu3) UNRELEASED; urgency=medium
+
+  * Trying to fix Xenial support
+  * Dependancies list fixed (affects Xenial)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
 timekpr-beta (0.3.6~ppa1~ubuntu2) UNRELEASED; urgency=medium
 
   * Trying to fix build on Precise

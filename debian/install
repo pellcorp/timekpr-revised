@@ -8,6 +8,7 @@ support/bin/timekpr-client usr/bin/
 support/bin/users.timekpr usr/bin
 src/common/timekprpam.py usr/share/pyshared/timekpr/common/
 src/common/timekprcommon.py usr/share/pyshared/timekpr/common/
+src/common/__init__.py usr/share/pyshared/timekpr/common/
 src/timekpr.py usr/share/pyshared/timekpr/
 src/timekpr-gui.py usr/share/pyshared/timekpr/
 src/timekpr-client.py usr/share/pyshared/timekpr/

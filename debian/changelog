@@ -1,6 +1,6 @@
 timekpr-beta (0.3.6~ppa1~ubuntu3) UNRELEASED; urgency=medium
 
-  * Trying to fix Xenial support
+  * Build fix (revert some changes from post* install scripts)
   * Dependancies list fixed (affects Xenial)
 
  -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300

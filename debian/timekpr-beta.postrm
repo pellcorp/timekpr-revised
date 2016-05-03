@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
 
 afile='/etc/security/access.conf'
 tfile='/etc/security/time.conf'

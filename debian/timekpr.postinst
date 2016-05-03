@@ -1,4 +1,6 @@
 #!/bin/sh
+set -e
+
 #Prepare gdm and login in /etc/pam.d/
 gfile='/etc/pam.d/gdm'
 kfile='/etc/pam.d/kdm'

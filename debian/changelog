@@ -1,3 +1,17 @@
+timekpr-beta (0.3.6~ppa1~ubuntu0) UNRELEASED; urgency=medium
+
+  * cleanup, build fixes & reorg for project to make it more streamlined
+  * fixes bug #1487883 (base packaging)
+  * speech synth implemented using python
+  * added speech, first notification options and about menu (thanks to Frank Gerbig)
+  * UI ported to GTK3 (thanks to Frank Gerbig)
+  * loginctl now filters only active users (thanks to Etienne URBAH)
+  * fixed project depends (included python-espeak & polkit for pkexec)
+  * Ubuntu 16.04 support (still try to maintain it for active releases and alternative DE's)
+  * Slovenian translations (thanks to Valentin Korenjak)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
 timekpr (0.3.5~ppa1~ubuntu10) UNRELEASED; urgency=medium
 
   * fixes bug #1467654 (from original timekpr repo)

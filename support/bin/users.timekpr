@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# this filters out only Active users using loginctl
+ACTIVE_USERS_LOGINCTL()
+(
+	loginctl list-users --no-legend | sed 's/^ \+//' | cut -d' ' -f2 | sort | uniq | \
+		while read TPKR_USER;
+		do
+			if  [ "$(loginctl show-user -p State $TPKR_USER)" = "State=active" ];
+			then
+				echo $TPKR_USER
+			fi
+		done
+)
+
+# check if loginctl is available
+which loginctl 1>/dev/null 2>/dev/null
+LC=$?
+
+# check if w is available
+which who 1>/dev/null 2>/dev/null
+W=$?
+
+# check if users is available
+which users 1>/dev/null 2>/dev/null
+U=$?
+
+# check users in priority (loginctl, who, users)
+if [ $LC -eq 0 ];
+then
+	TKPR_USERS="$(ACTIVE_USERS_LOGINCTL)"
+elif [ $W -eq 0 ];
+then
+	TKPR_USERS="$(who -s -u | cut -d' ' -f1 | sort | uniq)"
+elif [ $U -eq 0 ];
+then
+	TKPR_USERS="$(users | sed 's/ /\n/g' | sort | uniq)"
+fi
+
+# now filter out DM's and improve the result
+TKPR_USERS="$(echo $TKPR_USERS | grep -v -e '^gdm$' -e '^kdm$' -e '^lxdm$' -e '^lightdm$')"
+
+# output final user list
+echo "$TKPR_USERS"

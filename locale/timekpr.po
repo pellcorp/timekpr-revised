@@ -1,38 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Eduards Bezverhijs <edzis@inbox.lv>, 2014.
-# Jean-Philippe Lord <>, 2014.
-#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Timekpr\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-03 08:48+0300\n"
-"PO-Revision-Date: 2016-05-03 08:58+0300\n"
-"Last-Translator: \n"
-"Language-Team: Jean-Philippe Lord\n"
-"Language: fr\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-SearchPath-0: /home/admins/Desktop/timekpr/stable/gui\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: ../src/gui/about_dialog.ui:9
 msgid "About timekpr"
-msgstr "À propos de timekpr"
+msgstr ""
 
 #: ../src/gui/about_dialog.ui:19 ../src/timekpr-gui.py:187
 #: ../src/timekpr-client.py:286
 msgid "Keep control of computer usage"
-msgstr "Conserver le contrôle de l'utilisation de l'ordinateur"
+msgstr ""
 
 #: ../src/gui/about_dialog.ui:21
 msgid "http://launchpad.net/timekpr-revived"
-msgstr "http://launchpad.net/timekpr-revived"
+msgstr ""
 
 #: ../src/gui/about_dialog.ui:22
 msgid ""
@@ -55,315 +52,296 @@ msgstr ""
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
 #: ../src/timekpr-client.py:285
 msgid "translator-credits"
-msgstr "Jean-Philippe Lord"
+msgstr ""
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
 msgid "timekpr"
-msgstr "timekpr"
+msgstr ""
 
 #: ../src/gui/client.ui:26 ../src/gui/main_window.ui:148
 msgid "_Help"
-msgstr "_Aide"
+msgstr ""
 
 #: ../src/gui/client.ui:114
 msgid "User:"
-msgstr "Utilisateur:"
+msgstr ""
 
 #: ../src/gui/client.ui:198
 msgid "Show notification at logon?"
-msgstr "Afficher la notification à l'ouverture de session?"
+msgstr ""
 
 #: ../src/gui/client.ui:216
 msgid "Use speech notifications?"
-msgstr "Utilisez les notifications vocales?"
+msgstr ""
 
 #: ../src/gui/client.ui:238
 msgid "Notifications"
-msgstr "Notifications"
+msgstr ""
 
 #: ../src/gui/main_window.ui:235
 msgid "Select user"
-msgstr "Choisir l'utilisateur"
+msgstr ""
 
 #: ../src/gui/main_window.ui:351
 msgid "Bypass for today"
-msgstr "Contourner aujourd'hui"
+msgstr ""
 
 #: ../src/gui/main_window.ui:378
 msgid ""
 "Able to login all day today:\n"
 "(Also active bypass)"
 msgstr ""
-"Peut ouvrir une session sans limite aujourd'hui:\n"
-"(Contournement aussi en vigueur)"
 
 #: ../src/gui/main_window.ui:444
 msgid "Reset time"
-msgstr "Réinitialiser le temps"
+msgstr ""
 
 #: ../src/gui/main_window.ui:497
 msgid ""
 "Add time\n"
 "Reward / Penalty"
 msgstr ""
-"Ajouter du temps\n"
-"Récompense / Punition"
 
 #: ../src/gui/main_window.ui:542 ../src/gui/main_window.ui:1182
 msgid "minutes"
-msgstr "minutes"
+msgstr ""
 
 #: ../src/gui/main_window.ui:638
 msgid "Clear all restrictions"
-msgstr "Effacer toutes les limites"
+msgstr ""
 
 #: ../src/gui/main_window.ui:693
 msgid "Unlock Account"
-msgstr "Déverrouiller le compte"
+msgstr ""
 
 #: ../src/gui/main_window.ui:763
 msgid "-"
-msgstr "-"
+msgstr ""
 
 #: ../src/gui/main_window.ui:778
 msgid "Status for <span weight=\"bold\">username</span>"
-msgstr "État de <span weight=\"bold\">username</span>"
+msgstr ""
 
 #: ../src/gui/main_window.ui:796
 msgid "Time left:"
-msgstr "Temps restant:"
+msgstr ""
 
 #: ../src/gui/main_window.ui:811
 msgid "Account locked:"
-msgstr "Compte verrouillé:"
+msgstr ""
 
 #: ../src/gui/main_window.ui:826
 msgid "Limited by time frame (any day):"
 msgstr ""
-"Limité par la période horaire\n"
-"(n'importe quel jour):"
 
 #: ../src/gui/main_window.ui:841
 msgid "Limited by access duration (any day):"
 msgstr ""
-"Limité par la durée d'accès\n"
-"(n'importe quel jour):"
 
 #: ../src/gui/main_window.ui:856
 msgid "Status"
-msgstr "État"
+msgstr ""
 
 #: ../src/gui/main_window.ui:890
 msgid ""
 "Limit user access by defining the time duration\n"
 "(how long the user is logged in)"
 msgstr ""
-"Limiter l'accès de l'utilisateur en définissant la durée\n"
-"(combien de temps la session est ouverte)"
 
 #: ../src/gui/main_window.ui:922
 msgid "Limit access duration"
-msgstr "Limiter la durée d'accès"
+msgstr ""
 
 #: ../src/gui/main_window.ui:952 ../src/gui/main_window.ui:1448
 msgid "Sat"
-msgstr "Sam"
+msgstr ""
 
 #: ../src/gui/main_window.ui:985 ../src/gui/main_window.ui:1433
 msgid "Fri"
-msgstr "Ven"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1018 ../src/gui/main_window.ui:1418
 msgid "Thu"
-msgstr "Jeu"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1051 ../src/gui/main_window.ui:1403
 msgid "Wed"
-msgstr "Mer"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1084 ../src/gui/main_window.ui:1388
 msgid "Tue"
-msgstr "Mar"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1117 ../src/gui/main_window.ui:1373
 msgid "Mon"
-msgstr "Lun"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1150 ../src/gui/main_window.ui:1358
 #: ../src/timekpr-gui.py:520 ../src/timekpr-gui.py:545
 msgid "Every day"
-msgstr "Tous les jours"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1194 ../src/gui/main_window.ui:1287
 msgid "Configure per day"
-msgstr "Configuration par jour"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1232
 msgid ""
 "Limit user access by defining the hours\n"
 "when user is allowed to login"
 msgstr ""
-"Limiter l'accès de l'utilisateur en indiquant\n"
-"les heures où l'utilisateur peut ouvrir une session"
 
 #: ../src/gui/main_window.ui:1264
 msgid "Limit time frame"
-msgstr "Limite de la période horaire"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1326
 msgid "from"
-msgstr "de"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1342
 msgid "to"
-msgstr "à"
+msgstr ""
 
 #: ../src/gui/main_window.ui:1734
 msgid "Limits & Boundaries"
-msgstr "Limites et contraintes"
+msgstr ""
 
 #: ../src/timekpr-gui.py:51
 msgid "You need to have administrative privileges to run timekpr-gui"
 msgstr ""
-"Vous avez besoin des privilèges administrateurs pour exécuter timekpr-gui"
 
 #: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:189
 #: ../src/timekpr-client.py:214
 msgid "Timekpr Control Panel"
-msgstr "Panneau de configuration Timekpr"
+msgstr ""
 
 #: ../src/timekpr-gui.py:103
 msgid "Timekpr Client"
-msgstr "Timekpr Client"
+msgstr ""
 
 #: ../src/timekpr-gui.py:166
 msgid ""
 "You need to have at least one normal user available to configure timekpr"
 msgstr ""
-"Vous avez besoin d'au moins un utilisateur régulier disponible pour "
-"configurer timekpr"
 
 #: ../src/timekpr-gui.py:193 ../src/timekpr-gui.py:447
 msgid "Lock account"
-msgstr "Verrouiller le compte"
+msgstr ""
 
 #: ../src/timekpr-gui.py:196
 #, python-format
 msgid "Locked account %s"
-msgstr "Compte %s verrouillé"
+msgstr ""
 
 #: ../src/timekpr-gui.py:209
 #, python-format
 msgid "Unlocked account %s"
-msgstr "Compte %s déverrouillé"
+msgstr ""
 
 #: ../src/timekpr-gui.py:233
 #, python-format
 msgid "Removed all restrictions for account %s"
-msgstr "Effacer toutes les restrictions pour le compte %s"
+msgstr ""
 
 #: ../src/timekpr-gui.py:241
 #, python-format
 msgid "Cleared used up time for account %s"
-msgstr "Réinitialiser le temps d'utilisation pour le compte %s"
+msgstr ""
 
 #: ../src/timekpr-gui.py:258
 #, python-format
 msgid "Applied reward of %(num)s minute(s) to account %(user)s"
-msgstr "La récompense de %(num)s minute(s) au compte %(user)s a été appliquée."
+msgstr ""
 
 #: ../src/timekpr-gui.py:275
 #, python-format
 msgid "Set access hours to 00-24 on %(day)s for account %(user)s"
-msgstr "Régler les heures d'accès à 00-24 le %(day)s pour le compte %(user)s"
+msgstr ""
 
 #: ../src/timekpr-gui.py:280
 #, python-format
 msgid "Refreshed setting values from account %s"
-msgstr "Les paramètres pour le compte %s ont été actualisés"
+msgstr ""
 
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:543
 #, python-format
 msgid "%(min)s minute"
 msgid_plural "%(min)s minutes"
-msgstr[0] "%(min)s minute"
-msgstr[1] "%(min)s minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/timekpr-gui.py:445
 msgid "Unlock account"
-msgstr "Déverrouiller le compte"
+msgstr ""
 
 #: ../src/timekpr-gui.py:482
 msgid "Status for"
-msgstr "État pour"
+msgstr ""
 
 #: ../src/timekpr-gui.py:514 ../src/timekpr-gui.py:540
 msgid "Sun"
-msgstr "Dim"
+msgstr ""
 
 #: ../src/timekpr-gui.py:592
 #, python-format
 msgid "Applied limit changes for account %s"
-msgstr "Les modifications aux limites du compte %s ont été appliquées."
+msgstr ""
 
 #: ../src/timekpr-client.py:183 ../src/timekpr-client.py:212
 msgid "Time left..."
-msgstr "Temps restant..."
+msgstr ""
 
 #: ../src/timekpr-client.py:186
 msgid "Properties"
-msgstr "Propriétés"
+msgstr ""
 
 #: ../src/timekpr-client.py:192
 msgid "About"
-msgstr "Sur"
+msgstr ""
 
 #: ../src/timekpr-client.py:246
 msgid "Timekpr Client Control Panel"
-msgstr "Panneau de configuration client Timekpr"
+msgstr ""
 
 #: ../src/timekpr-client.py:408
 msgid "You are early, you will be logged out in LESS than 2 minutes"
-msgstr "Il est trop tôt, votre session sera fermée dans MOINS de 2 minutes"
+msgstr ""
 
 #: ../src/timekpr-client.py:412
 msgid "You are late, you will be logged out in LESS than 2 minutes"
-msgstr "Il est trop tard, votre session sera fermée dans MOINS de 2 minutes"
+msgstr ""
 
 #: ../src/timekpr-client.py:416
 msgid "Your time is up, you will be logged out in LESS than 2 minutes"
 msgstr ""
-"Votre temps est écoulé, votre session sera fermée dans MOINS de 2 minutes"
 
 #: ../src/timekpr-client.py:438
 msgid "Your time is not limited today"
-msgstr "Votre temps n'est pas limité aujourd'hui"
+msgstr ""
 
 #: ../src/timekpr-client.py:522
 msgid "You have"
-msgstr "Il vous reste"
+msgstr ""
 
 #: ../src/timekpr-client.py:527
 #, python-format
 msgid "%(hour)s hour"
 msgid_plural "%(hour)s hours"
-msgstr[0] "%(hour)s heure"
-msgstr[1] "%(hour)s heures"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/timekpr-client.py:559
 #, python-format
 msgid "%(sec)s second"
 msgid_plural "%(sec)s seconds"
-msgstr[0] "%(sec)s seconde"
-msgstr[1] "%(sec)s secondes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/timekpr-client.py:566
 msgid "left"
-msgstr " "
+msgstr ""
 
 #: ../src/timekpr-client.py:576
 msgid "Timekpr notification"
-msgstr "Notifications de Timekpr"
-
-#~ msgid "\tSun\t "
-#~ msgstr "\tDim\t"
+msgstr ""

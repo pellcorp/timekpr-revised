@@ -1,4 +1,6 @@
 #!/bin/bash
+PREFIX="${1:-/}"
+
 _CONTINUE () {
 	#Ask to continue
 	echo "This will install the latest version of timekpr,"
@@ -25,8 +27,8 @@ _COPYSTUFF() {
 			mkdir -p $d
 		fi
 		f=`basename $a`
-		echo "Copying $a to /$b$f"
-		cp $a /$b$f
+		echo "Copying $a to $PREFIX$b$f"
+		cp $a $PREFIX$b$f
 	done
 	echo ""
 	echo "timekpr has been updated!"
@@ -37,4 +39,3 @@ _COPYSTUFF() {
 echo ""
 _CONTINUE
 echo ""
-

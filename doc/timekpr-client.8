@@ -1,8 +1,8 @@
 .\" Man page generated from reStructuredText.
 .
-.TH TIMEKPR 8 "2014-09-24" "0.3.6" "User Manuals"
+.TH TIMEKPR-CLIENT 8 "2014-09-24" "0.3.6" "User Manuals"
 .SH NAME
-timekpr \- Keep control of computer usage
+timekpr-client \- Show timekpr constraints for the user
 .
 .nr rst2man-indent-level 0
 .
@@ -76,46 +76,24 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .
 .SH SYNOPSIS
 .sp
-\fBtimekpr\fP
+\fBtimekpr\-client\fP
 .SH DESCRIPTION
 .sp
-\fBtimekpr\fP tracks and controls the computer usage of user accounts. Using \fBtimekpr\-gui(8)\fP, the administrator can limit daily usage per user by configuring
-.INDENT 0.0
-.IP \(bu 2
-a daytime range (e.g. from 8am to 7pm) when the user is allowed to log on
-.IP \(bu 2
-an elapsed time (e.g. 90 minutes) the user is allowed to log on per day
-.UNINDENT
+timekpr\-client is automatically started if you log on and displays a status icon in the system tray.
 .sp
-\fBtimekpr\fP allows users to login or to stay logged in only as long as both limits are met. As long as a user hasn\(aqt any limits configured, \fBtimekpr\fP does not do any monitoring or other
-actions on that user.
-.sp
-To disallow logins outside the defined daytime range, timekpr relies on the settings in the configuration file for the time PAM\-Module entered by \fBtimekpr\-gui\fP\&.
-.sp
-To disallow users to stay logged in over the defined daytime range, or to stay logged in over the defined elapsed time, \fBtimekpr\fP checks the process tree at regular intervals. When a cer‐
-tain user is logged in, the file \fI/var/lib/timekpr/<username>.time\fP is updated to contain the new elapsed time. This time is then checked against the total allowed (stored in
-\fI/etc/timekpr/<username>\fP).
-.sp
-When \fBtimekpr\fP discovers a user violating its limits, the user is warned and given a grace period to save his work. After this grace period, the user is kicked out by killing its pro‐
-cesses. In addition, the file \fI/var/lib/timekpr/<username>.logout\fP is touched to state the fact that the user has been logged out forcibly by \fBtimekpr\fP\&.
-.sp
-When the user tries to login again (within its daytime range, but all elapsed time used up), it is kicked out immediately and then locked by editing the config file for the access PAM\-
-Module. Now the user cannot login any more.
+In the pop\-up menu you can select if you want to skip the logon notification
+(\(aq\fIYour time is not limited today\fP\(aq if your user is not restricted)
+and if you want to be notified via speech output
+(provided that a text to speech command e.g. \fIespeak\fP is installed and configured in the system wide configuration file).
 .SH FILES
 .INDENT 0.0
 .TP
+.B \fI~/.config/timekpr/timekpr\-client.conf\fP
+The user specific timekpr\-client configuration file.
+.TP
 .B \fI/etc/timekpr.conf\fP
 The system wide configuration file. See \fBtimekpr.conf(5)\fP for further details.
-.TP
-.B \fI/etc/security/time.conf\fP, \fI/etc/security/access.conf\fP
-The system wide PAM Configuration files for the time and and access modules.
 .UNINDENT
-.SH DIAGNOSTICS
-.sp
-The logfile is quite verbose: \fI/var/log/timekpr.log\fP
-.SH BUGS
-.sp
-Please report bugs to the bugtracker at \fI\%https://bugs.launchpad.net/timekpr/+bugs\fP
 .SH AUTHORS
 .sp
 Chris Jackson wrote the original bash script.

@@ -12,6 +12,7 @@ COPYRIGHT
 		Copyright (c) 2008 Even Nedberg <code@nedberg.net>
 		Copyright (c) 2008 Savvas Radevic <vicedar@gmail.com>
 		Copyright (c) 2008 Nicolas Laurance <nlaurance@zindep.com>
+		Copyright (c) 2014 Eduards Bezverhijs <edzis@inbox.lv>
 
 LICENSE
 -------

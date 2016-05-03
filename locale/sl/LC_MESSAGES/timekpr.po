@@ -1,34 +1,33 @@
-#
 # Eduards Bezverhijs <edzis@inbox.lv>, 2014.
 # Jean-Philippe Lord <>, 2014.
-#
+# Valentin Korenjak <valentin@korenjak.si>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-03 08:48+0300\n"
-"PO-Revision-Date: 2016-05-03 08:58+0300\n"
+"PO-Revision-Date: 2016-05-03 09:03+0300\n"
 "Last-Translator: \n"
-"Language-Team: Jean-Philippe Lord\n"
-"Language: fr\n"
+"Language-Team: Valentin Korenjak\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-SearchPath-0: /home/admins/Desktop/timekpr/stable/gui\n"
 
 #: ../src/gui/about_dialog.ui:9
 msgid "About timekpr"
-msgstr "À propos de timekpr"
+msgstr "O timekpr"
 
 #: ../src/gui/about_dialog.ui:19 ../src/timekpr-gui.py:187
 #: ../src/timekpr-client.py:286
 msgid "Keep control of computer usage"
-msgstr "Conserver le contrôle de l'utilisation de l'ordinateur"
+msgstr "Nadzirajte uporabo računalnika"
 
 #: ../src/gui/about_dialog.ui:21
 msgid "http://launchpad.net/timekpr-revived"
@@ -50,12 +49,25 @@ msgid ""
 "this program.  If not, see <http://www.gnu.org/licenses/>. In Debian, see "
 "file /usr/share/common-licenses/GPL-3"
 msgstr ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>. In Debian, see "
+"file /usr/share/common-licenses/GPL-3"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
 #: ../src/timekpr-client.py:285
 msgid "translator-credits"
-msgstr "Jean-Philippe Lord"
+msgstr "Valentin Korenjak"
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
 msgid "timekpr"
@@ -63,63 +75,63 @@ msgstr "timekpr"
 
 #: ../src/gui/client.ui:26 ../src/gui/main_window.ui:148
 msgid "_Help"
-msgstr "_Aide"
+msgstr "Pomo_č"
 
 #: ../src/gui/client.ui:114
 msgid "User:"
-msgstr "Utilisateur:"
+msgstr "Uporabnik:"
 
 #: ../src/gui/client.ui:198
 msgid "Show notification at logon?"
-msgstr "Afficher la notification à l'ouverture de session?"
+msgstr "Prikaži obvestilo ob prijavi?"
 
 #: ../src/gui/client.ui:216
 msgid "Use speech notifications?"
-msgstr "Utilisez les notifications vocales?"
+msgstr "Uporabite obvestila govora?"
 
 #: ../src/gui/client.ui:238
 msgid "Notifications"
-msgstr "Notifications"
+msgstr "Obvestila"
 
 #: ../src/gui/main_window.ui:235
 msgid "Select user"
-msgstr "Choisir l'utilisateur"
+msgstr "Izberi uporabnika"
 
 #: ../src/gui/main_window.ui:351
 msgid "Bypass for today"
-msgstr "Contourner aujourd'hui"
+msgstr "Opusti za danes"
 
 #: ../src/gui/main_window.ui:378
 msgid ""
 "Able to login all day today:\n"
 "(Also active bypass)"
 msgstr ""
-"Peut ouvrir une session sans limite aujourd'hui:\n"
-"(Contournement aussi en vigueur)"
+"Danes se lahko prijavi brez omejitve:\n"
+"(Vključuje tudi aktivno opustitev nadzora)"
 
 #: ../src/gui/main_window.ui:444
 msgid "Reset time"
-msgstr "Réinitialiser le temps"
+msgstr "Ponastavi čas"
 
 #: ../src/gui/main_window.ui:497
 msgid ""
 "Add time\n"
 "Reward / Penalty"
 msgstr ""
-"Ajouter du temps\n"
-"Récompense / Punition"
+"Dodaj čas\n"
+"Nagrada / Kazen"
 
 #: ../src/gui/main_window.ui:542 ../src/gui/main_window.ui:1182
 msgid "minutes"
-msgstr "minutes"
+msgstr "minute"
 
 #: ../src/gui/main_window.ui:638
 msgid "Clear all restrictions"
-msgstr "Effacer toutes les limites"
+msgstr "Počisti vse omejitve"
 
 #: ../src/gui/main_window.ui:693
 msgid "Unlock Account"
-msgstr "Déverrouiller le compte"
+msgstr "Odkleni račun"
 
 #: ../src/gui/main_window.ui:763
 msgid "-"
@@ -127,110 +139,110 @@ msgstr "-"
 
 #: ../src/gui/main_window.ui:778
 msgid "Status for <span weight=\"bold\">username</span>"
-msgstr "État de <span weight=\"bold\">username</span>"
+msgstr "Status uporabnika <span weight=\"bold\">username</span>"
 
 #: ../src/gui/main_window.ui:796
 msgid "Time left:"
-msgstr "Temps restant:"
+msgstr "Preostali čas:"
 
 #: ../src/gui/main_window.ui:811
 msgid "Account locked:"
-msgstr "Compte verrouillé:"
+msgstr "Račun zaklenjen:"
 
 #: ../src/gui/main_window.ui:826
 msgid "Limited by time frame (any day):"
 msgstr ""
-"Limité par la période horaire\n"
-"(n'importe quel jour):"
+"Dostop omejen po urah\n"
+"(katerikoli dan):"
 
 #: ../src/gui/main_window.ui:841
 msgid "Limited by access duration (any day):"
 msgstr ""
-"Limité par la durée d'accès\n"
-"(n'importe quel jour):"
+"Omejeno trajanje dostopa\n"
+"(katerikoli dan):"
 
 #: ../src/gui/main_window.ui:856
 msgid "Status"
-msgstr "État"
+msgstr "Status"
 
 #: ../src/gui/main_window.ui:890
 msgid ""
 "Limit user access by defining the time duration\n"
 "(how long the user is logged in)"
 msgstr ""
-"Limiter l'accès de l'utilisateur en définissant la durée\n"
-"(combien de temps la session est ouverte)"
+"Omeji uporabo z določitvijo trajanja\n"
+"(koliko časa je uporabnik lahko prijavljen)"
 
 #: ../src/gui/main_window.ui:922
 msgid "Limit access duration"
-msgstr "Limiter la durée d'accès"
+msgstr "Omeji trajanje dostopa"
 
 #: ../src/gui/main_window.ui:952 ../src/gui/main_window.ui:1448
 msgid "Sat"
-msgstr "Sam"
+msgstr "Sob"
 
 #: ../src/gui/main_window.ui:985 ../src/gui/main_window.ui:1433
 msgid "Fri"
-msgstr "Ven"
+msgstr "Pet"
 
 #: ../src/gui/main_window.ui:1018 ../src/gui/main_window.ui:1418
 msgid "Thu"
-msgstr "Jeu"
+msgstr "Čet"
 
 #: ../src/gui/main_window.ui:1051 ../src/gui/main_window.ui:1403
 msgid "Wed"
-msgstr "Mer"
+msgstr "Sre"
 
 #: ../src/gui/main_window.ui:1084 ../src/gui/main_window.ui:1388
 msgid "Tue"
-msgstr "Mar"
+msgstr "Tor"
 
 #: ../src/gui/main_window.ui:1117 ../src/gui/main_window.ui:1373
 msgid "Mon"
-msgstr "Lun"
+msgstr "Pon"
 
 #: ../src/gui/main_window.ui:1150 ../src/gui/main_window.ui:1358
 #: ../src/timekpr-gui.py:520 ../src/timekpr-gui.py:545
 msgid "Every day"
-msgstr "Tous les jours"
+msgstr "Vsak dan"
 
 #: ../src/gui/main_window.ui:1194 ../src/gui/main_window.ui:1287
 msgid "Configure per day"
-msgstr "Configuration par jour"
+msgstr "Nastavi po dnevih"
 
 #: ../src/gui/main_window.ui:1232
 msgid ""
 "Limit user access by defining the hours\n"
 "when user is allowed to login"
 msgstr ""
-"Limiter l'accès de l'utilisateur en indiquant\n"
-"les heures où l'utilisateur peut ouvrir une session"
+"Omeji uporabo z določitvijo ur dneva\n"
+"(ob katerih urah se uporabnik lahko prijavi)"
 
 #: ../src/gui/main_window.ui:1264
 msgid "Limit time frame"
-msgstr "Limite de la période horaire"
+msgstr "Omeji ure uporabe"
 
 #: ../src/gui/main_window.ui:1326
 msgid "from"
-msgstr "de"
+msgstr "od"
 
 #: ../src/gui/main_window.ui:1342
 msgid "to"
-msgstr "à"
+msgstr "do"
 
 #: ../src/gui/main_window.ui:1734
 msgid "Limits & Boundaries"
-msgstr "Limites et contraintes"
+msgstr "Omejitve"
 
 #: ../src/timekpr-gui.py:51
 msgid "You need to have administrative privileges to run timekpr-gui"
 msgstr ""
-"Vous avez besoin des privilèges administrateurs pour exécuter timekpr-gui"
+"Za izvajanje aplikacije timekpr-gui potrebuješ administratorske privilegije"
 
 #: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:189
 #: ../src/timekpr-client.py:214
 msgid "Timekpr Control Panel"
-msgstr "Panneau de configuration Timekpr"
+msgstr "Nadzorna plošča Timekpr"
 
 #: ../src/timekpr-gui.py:103
 msgid "Timekpr Client"
@@ -239,123 +251,126 @@ msgstr "Timekpr Client"
 #: ../src/timekpr-gui.py:166
 msgid ""
 "You need to have at least one normal user available to configure timekpr"
-msgstr ""
-"Vous avez besoin d'au moins un utilisateur régulier disponible pour "
-"configurer timekpr"
+msgstr "Za nastavljanje timekpr potrebuješ vsaj enega običajnega uporabnika"
 
 #: ../src/timekpr-gui.py:193 ../src/timekpr-gui.py:447
 msgid "Lock account"
-msgstr "Verrouiller le compte"
+msgstr "Zakleni račun"
 
 #: ../src/timekpr-gui.py:196
 #, python-format
 msgid "Locked account %s"
-msgstr "Compte %s verrouillé"
+msgstr "Račun %s je zaklenjen"
 
 #: ../src/timekpr-gui.py:209
 #, python-format
 msgid "Unlocked account %s"
-msgstr "Compte %s déverrouillé"
+msgstr "Račun %s je odklenjen"
 
 #: ../src/timekpr-gui.py:233
 #, python-format
 msgid "Removed all restrictions for account %s"
-msgstr "Effacer toutes les restrictions pour le compte %s"
+msgstr "Vse omejitve za račun %s so odstranjene"
 
 #: ../src/timekpr-gui.py:241
 #, python-format
 msgid "Cleared used up time for account %s"
-msgstr "Réinitialiser le temps d'utilisation pour le compte %s"
+msgstr "Izbrisan porabljen čas za račun %s"
 
 #: ../src/timekpr-gui.py:258
 #, python-format
 msgid "Applied reward of %(num)s minute(s) to account %(user)s"
-msgstr "La récompense de %(num)s minute(s) au compte %(user)s a été appliquée."
+msgstr "%(num)s nagradnih minut(a/i/e) dodeljenih računu %(user)s"
 
 #: ../src/timekpr-gui.py:275
 #, python-format
 msgid "Set access hours to 00-24 on %(day)s for account %(user)s"
-msgstr "Régler les heures d'accès à 00-24 le %(day)s pour le compte %(user)s"
+msgstr "Nastavljeni čas dostopa 00-24 na %(day)s za račun %(user)s"
 
 #: ../src/timekpr-gui.py:280
 #, python-format
 msgid "Refreshed setting values from account %s"
-msgstr "Les paramètres pour le compte %s ont été actualisés"
+msgstr "Nastavitve za račun %s so osvežene"
 
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:543
 #, python-format
 msgid "%(min)s minute"
 msgid_plural "%(min)s minutes"
-msgstr[0] "%(min)s minute"
-msgstr[1] "%(min)s minutes"
+msgstr[0] "%(min)s minut"
+msgstr[1] "%(min)s minuta"
+msgstr[2] "%(min)s minuti"
+msgstr[3] "%(min)s minute"
 
 #: ../src/timekpr-gui.py:445
 msgid "Unlock account"
-msgstr "Déverrouiller le compte"
+msgstr "Odkleni račun"
 
 #: ../src/timekpr-gui.py:482
 msgid "Status for"
-msgstr "État pour"
+msgstr "Status za"
 
 #: ../src/timekpr-gui.py:514 ../src/timekpr-gui.py:540
 msgid "Sun"
-msgstr "Dim"
+msgstr "Ned"
 
 #: ../src/timekpr-gui.py:592
 #, python-format
 msgid "Applied limit changes for account %s"
-msgstr "Les modifications aux limites du compte %s ont été appliquées."
+msgstr "Aplicirane omejitve za račun %s"
 
 #: ../src/timekpr-client.py:183 ../src/timekpr-client.py:212
 msgid "Time left..."
-msgstr "Temps restant..."
+msgstr "Preostali čas..."
 
 #: ../src/timekpr-client.py:186
 msgid "Properties"
-msgstr "Propriétés"
+msgstr "Nepremičnine"
 
 #: ../src/timekpr-client.py:192
 msgid "About"
-msgstr "Sur"
+msgstr "O"
 
 #: ../src/timekpr-client.py:246
 msgid "Timekpr Client Control Panel"
-msgstr "Panneau de configuration client Timekpr"
+msgstr "Timekpr Client Nadzorna plošča"
 
 #: ../src/timekpr-client.py:408
 msgid "You are early, you will be logged out in LESS than 2 minutes"
-msgstr "Il est trop tôt, votre session sera fermée dans MOINS de 2 minutes"
+msgstr "Prezgoden si, odjavili te bomo v MANJ kot dveh minutah"
 
 #: ../src/timekpr-client.py:412
 msgid "You are late, you will be logged out in LESS than 2 minutes"
-msgstr "Il est trop tard, votre session sera fermée dans MOINS de 2 minutes"
+msgstr "Prepozen si, odjavili te bomo v MANJ kot dveh minutah"
 
 #: ../src/timekpr-client.py:416
 msgid "Your time is up, you will be logged out in LESS than 2 minutes"
-msgstr ""
-"Votre temps est écoulé, votre session sera fermée dans MOINS de 2 minutes"
+msgstr "Tvoj čas je potekel, odjavili te bomo v MANJ kot dveh minutah"
 
 #: ../src/timekpr-client.py:438
 msgid "Your time is not limited today"
-msgstr "Votre temps n'est pas limité aujourd'hui"
+msgstr "Tvoj čas danes ni omejen"
 
 #: ../src/timekpr-client.py:522
 msgid "You have"
-msgstr "Il vous reste"
+msgstr "Imaš še"
 
 #: ../src/timekpr-client.py:527
 #, python-format
 msgid "%(hour)s hour"
 msgid_plural "%(hour)s hours"
-msgstr[0] "%(hour)s heure"
-msgstr[1] "%(hour)s heures"
+msgstr[0] "%(hour)s ur"
+msgstr[1] "%(hour)s ura"
+msgstr[2] "%(hour)s uri"
+msgstr[3] "%(hour)s ure"
 
 #: ../src/timekpr-client.py:559
 #, python-format
 msgid "%(sec)s second"
 msgid_plural "%(sec)s seconds"
-msgstr[0] "%(sec)s seconde"
-msgstr[1] "%(sec)s secondes"
+msgstr[0] "%(sec)s sekund"
+msgstr[1] "%(sec)s sekunda"
+msgstr[2] "%(sec)s sekundi"
+msgstr[3] "%(sec)s sekunde"
 
 #: ../src/timekpr-client.py:566
 msgid "left"
@@ -363,7 +378,16 @@ msgstr " "
 
 #: ../src/timekpr-client.py:576
 msgid "Timekpr notification"
-msgstr "Notifications de Timekpr"
+msgstr "Timekpr obvestilo"
 
 #~ msgid "\tSun\t "
-#~ msgstr "\tDim\t"
+#~ msgstr "\tNed\t"
+
+#~ msgid ""
+#~ "Copyright (c) 2008 Even Nedberg\n"
+#~ "Copyright (c) 2008 Savvas Radevic\n"
+#~ "Copyright (c) 2014 Eduards Bezverhijs"
+#~ msgstr ""
+#~ "Copyright (c) 2008 Even Nedberg\n"
+#~ "Copyright (c) 2008 Savvas Radevic\n"
+#~ "Copyright (c) 2014 Eduards Bezverhijs"

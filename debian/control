@@ -3,7 +3,7 @@ Section: admin
 Priority: extra
 Maintainer: Eduards Bezverhijs <edzis@inbox.lv>
 Uploaders: Eduards Bezverhijs <edzis@inbox.lv>, Even Nedberg <code@nedberg.net>, Savvas Radevic <vicedar@gmail.com>
-Build-Depends: debhelper (>= 7), python-dev, po-debconf, dh-python
+Build-Depends: debhelper (>= 7), python-dev, po-debconf, dh-python | python-support
 Standards-Version: 3.9.5
 X-Python-Version: >= 2.5
 Homepage: http://launchpad.net/timekpr-revived/

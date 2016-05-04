@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timekpr-revived\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 19:22+0300\n"
-"PO-Revision-Date: 2016-05-04 19:35+0300\n"
+"POT-Creation-Date: 2016-05-04 20:22+0300\n"
+"PO-Revision-Date: 2016-05-04 20:33+0300\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "Language: hu\n"
@@ -277,6 +277,7 @@ msgstr "00-24 hozzáférés %(user)s számára %(day)s napon"
 msgid "Refreshed setting values from account %s"
 msgstr "%s beállításai frissítve lettek"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
@@ -333,10 +334,12 @@ msgstr "Elfogyott az időd, kidoblak 2 percen belül!"
 msgid "Your time is not limited today"
 msgstr "Mára nincs időkorlátod"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:544
 msgid "You have"
 msgstr "Van még"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
@@ -344,6 +347,7 @@ msgid_plural "%(hour)s hours"
 msgstr[0] "%(hour)s órád"
 msgstr[1] "%(hour)s órád"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
@@ -351,6 +355,7 @@ msgid_plural "%(sec)s seconds"
 msgstr[0] "%(sec)s mp"
 msgstr[1] "%(sec)s mp"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
 msgstr "időd"

@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 19:23+0300\n"
-"PO-Revision-Date: 2016-05-03 09:01+0300\n"
+"POT-Creation-Date: 2016-05-04 20:23+0300\n"
+"PO-Revision-Date: 2016-05-04 20:34+0300\n"
 "Last-Translator: \n"
 "Language-Team: Eduards Bezverhijs\n"
 "Language: ru\n"
@@ -277,6 +277,7 @@ msgstr "Установить время работы 00-24 на %(day)s для �
 msgid "Refreshed setting values from account %s"
 msgstr "Обнавлены ограничения для пользователя %s"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
@@ -338,10 +339,12 @@ msgstr ""
 msgid "Your time is not limited today"
 msgstr "Сегодня ваше время не лимитировано"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:544
 msgid "You have"
 msgstr "Ваш остаток времени"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
@@ -350,6 +353,7 @@ msgstr[0] "%(hour)s час"
 msgstr[1] "%(hour)s часа"
 msgstr[2] "%(hour)s часов"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
@@ -358,6 +362,7 @@ msgstr[0] "%(sec)s секунда"
 msgstr[1] "%(sec)s секунды"
 msgstr[2] "%(sec)s секунд"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
 msgstr " "

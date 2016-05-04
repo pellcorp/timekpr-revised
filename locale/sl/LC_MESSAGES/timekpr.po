@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 19:23+0300\n"
-"PO-Revision-Date: 2016-05-03 09:03+0300\n"
+"POT-Creation-Date: 2016-05-04 20:23+0300\n"
+"PO-Revision-Date: 2016-05-04 20:34+0300\n"
 "Last-Translator: \n"
 "Language-Team: Valentin Korenjak\n"
 "Language: sl\n"
@@ -292,6 +292,7 @@ msgstr "Nastavljeni čas dostopa 00-24 na %(day)s za račun %(user)s"
 msgid "Refreshed setting values from account %s"
 msgstr "Nastavitve za račun %s so osvežene"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
@@ -350,10 +351,12 @@ msgstr "Tvoj čas je potekel, odjavili te bomo v MANJ kot dveh minutah"
 msgid "Your time is not limited today"
 msgstr "Tvoj čas danes ni omejen"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:544
 msgid "You have"
 msgstr "Imaš še"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
@@ -363,6 +366,7 @@ msgstr[1] "%(hour)s ura"
 msgstr[2] "%(hour)s uri"
 msgstr[3] "%(hour)s ure"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
@@ -372,6 +376,7 @@ msgstr[1] "%(sec)s sekunda"
 msgstr[2] "%(sec)s sekundi"
 msgstr[3] "%(sec)s sekunde"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
 msgstr " "

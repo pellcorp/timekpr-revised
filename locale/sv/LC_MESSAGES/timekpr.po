@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: timekpr-revived\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 19:23+0300\n"
-"PO-Revision-Date: 2016-05-04 19:31+0300\n"
+"POT-Creation-Date: 2016-05-04 20:23+0300\n"
+"PO-Revision-Date: 2016-05-04 20:34+0300\n"
 "Last-Translator: \n"
 "Language-Team: Swedish <sv@li.org>\n"
 "Language: sv\n"
@@ -275,6 +275,7 @@ msgstr "Sätt åtkomsttiden till 00-24 under %(day)s för konto %(user)s"
 msgid "Refreshed setting values from account %s"
 msgstr "Uppdaterade inställningsvärden från konto %s"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
@@ -333,10 +334,12 @@ msgstr "Din tid är slut och du kommer att loggas ut om mindre än 2 minuter"
 msgid "Your time is not limited today"
 msgstr "Din tid är inte begränsad i dag"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:544
 msgid "You have"
 msgstr "Du har"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
@@ -344,6 +347,7 @@ msgid_plural "%(hour)s hours"
 msgstr[0] "%(hour)s timma"
 msgstr[1] "%(hour)s timmar"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
@@ -351,6 +355,7 @@ msgid_plural "%(sec)s seconds"
 msgstr[0] "%(sec)s sekund"
 msgstr[1] "%(sec)s sekunder"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
 msgstr "vänster"

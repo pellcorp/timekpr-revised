@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 19:22+0300\n"
-"PO-Revision-Date: 2016-05-03 08:54+0300\n"
+"POT-Creation-Date: 2016-05-04 20:22+0300\n"
+"PO-Revision-Date: 2016-05-04 20:33+0300\n"
 "Last-Translator: \n"
 "Language-Team: Kai Springstein\n"
 "Language: de\n"
@@ -279,6 +279,7 @@ msgstr "Zugangsstunden auf 00-24 gesetzt für %(day)s für Konto %(user)s"
 msgid "Refreshed setting values from account %s"
 msgstr "Einstellungswerte von Konto %s aufgefrischt"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
@@ -335,10 +336,12 @@ msgstr "Deine Zeit ist um, du wirst in WENIGER als 2 Minuten ausgeloggt"
 msgid "Your time is not limited today"
 msgstr "Deine Zeit ist heute nicht eingeschränkt"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:544
 msgid "You have"
 msgstr "Dir bleiben noch"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
@@ -346,6 +349,7 @@ msgid_plural "%(hour)s hours"
 msgstr[0] "%(hour)s Stunde"
 msgstr[1] "%(hour)s Stunden"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
@@ -353,6 +357,7 @@ msgid_plural "%(sec)s seconds"
 msgstr[0] "%(sec)s Sekunde"
 msgstr[1] "%(sec)s Sekunden"
 
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
 msgstr " "

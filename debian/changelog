@@ -1,3 +1,10 @@
+timekpr-beta (0.3.6~ppa1~ubuntu4) UNRELEASED; urgency=medium
+
+  * Try to use dbus by default
+  * Dependancies list adjusted for dbus
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
 timekpr-beta (0.3.6~ppa1~ubuntu3) UNRELEASED; urgency=medium
 
   * Build fix (revert some changes from post* install scripts)

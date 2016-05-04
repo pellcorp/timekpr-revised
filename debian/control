@@ -10,7 +10,7 @@ Homepage: http://launchpad.net/timekpr-revived/
 
 Package: timekpr-beta
 Architecture: any
-Depends: ${misc:Depends}, ${python:Depends}, python-gtk2, python-glade2, procps, libnotify-bin, libpam-modules, policykit-1-gnome, python-gi
+Depends: ${misc:Depends}, ${python:Depends}, python-gtk2, python-glade2, procps, libnotify-bin, libpam-modules, policykit-1-gnome, python-gi, python-dbus
 Suggests: python3, espeak, python-espeak
 Provides: timekpr
 Conflicts: timekpr

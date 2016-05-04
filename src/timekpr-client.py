@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+# configparser
 try:
     # python3
     import configparser
@@ -7,6 +8,7 @@ except ImportError:
     # python2.x
     import ConfigParser as configparser
 
+# indicator stuff
 try:
     from gi.repository import AppIndicator3 as AppIndicator
     USE_INDICATOR = True
@@ -14,11 +16,20 @@ except ImportError:
     USE_INDICATOR = False
     pass
 
+# initi speech
 try:
     from espeak import espeak as espeak
     USE_SPEECH = True
 except ImportError:
     USE_SPEECH = False
+    pass
+
+# trying to get on the bus
+try:
+    import dbus
+    USE_DBUS = True
+except ImportError:
+    USE_DBUS = False
     pass
 
 import datetime
@@ -168,8 +179,10 @@ def init_espeak():
 
 class IndicatorTimekpr(object):
     def __init__(self):
-        # get which DE we are running
+        # changeable global variables
+        global USE_DBUS
 
+        # get which DE we are running
         self.isAppIndicator = (os.getenv('XDG_CURRENT_DESKTOP') == "Unity") and USE_INDICATOR
 
         # this is for Unity stuff
@@ -220,11 +233,20 @@ class IndicatorTimekpr(object):
             uimanager.insert_action_group(action_group)
             self.popup = uimanager.get_widget("/PopupMenu")
 
+        # trying to get on the bus
+        if USE_DBUS:
+            try:
+                self.sessionDbus = dbus.SessionBus()
+                self.notifyObject = self.sessionDbus.get_object('org.freedesktop.Notifications', '/org/freedesktop/Notifications')
+                self.notifyInterface = dbus.Interface(self.notifyObject, 'org.freedesktop.Notifications')
+            except ImportError:
+                USE_DBUS = False
+                pass
+
         # initialize timekpr related stuff
         self.initTimekpr()
 
     def on_click(self, evt):
-        print("on_click")
         self.click = True
         self.regularNotifier()
 
@@ -572,7 +594,7 @@ class IndicatorTimekpr(object):
         # defaults
         icon = 'gtk-dialog-info'
         durationSecs = 3
-        durationMsecs = str(durationSecs * 1000)
+        durationMsecs = durationSecs * 1000
         title = _('Timekpr notification')
 
         # based on urgency, choose different icon
@@ -585,28 +607,21 @@ class IndicatorTimekpr(object):
         if not VAR['USE_SPEECH_NOTIFICATION']:
             urgency = 'critical'
 
+        # if dbus available
+        if USE_DBUS:
+            # notify
+            self.notifyInterface.Notify('Timekpr', 0, icon, title, message, '', '', durationMsecs)
+            print "notification via dbus"
         # KDE uses different tech to notify users
-        if self.getSessionName() == 'KDE':
-            # KDE4 uses dbus
-            if self.getSessionVersion(self.getSessionName()) == 4:
-                # do DBUS stuff
-                import dbus
-
-                # set up
-                notificationId = 0
-                sessionDbus = dbus.SessionBus()
-                notifyInterface = dbus.Interface(bus.get_object('org.freedesktop.Notifications', '/org/freedesktop/Notifications'), 'org.freedesktop.Notifications')
-
-                # notify
-                notificationId = notifyInterface.Notify('', notificationId, '', title, message, '', '', -1)
-                sleep(duration) # we need to sleep explicitly
-                notifyInterface.CloseNotification(notificationId)
-            else:
-                # KDE3 and friends use dcop
-                getcmdoutput('dcop knotify default notify notifying timekpr-client "' + message + '" "" "" 16 0')
+        elif self.getSessionName() == 'KDE' and self.getSessionVersion(self.getSessionName()) == 3:
+            # KDE3 and friends use dcop
+            getcmdoutput('dcop knotify default notify notifying timekpr-client "' + message + '" "" "" 16 0')
+            print "notification via dcop"
+        # failover
         else:
             # for the rest try standard notification
-            getcmdoutput('notify-send --icon=' + icon + ' --urgency=' + urgency + ' -t ' + durationMsecs + ' "' + title + '" "' + message + '"')
+            getcmdoutput('notify-send --icon=' + icon + ' --urgency=' + urgency + ' -t ' + str(durationMsecs) + ' "' + title + '" "' + message + '"')
+            print "notification via notify-send"
 
         # if speech is enabled, let's make some noise
         if VAR['USE_SPEECH_NOTIFICATION'] and USE_SPEECH:

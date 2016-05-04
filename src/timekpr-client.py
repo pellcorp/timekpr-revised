@@ -236,6 +236,7 @@ class IndicatorTimekpr(object):
         # trying to get on the bus
         if USE_DBUS:
             try:
+                # dbus connection
                 self.sessionDbus = dbus.SessionBus()
                 self.notifyObject = self.sessionDbus.get_object('org.freedesktop.Notifications', '/org/freedesktop/Notifications')
                 self.notifyInterface = dbus.Interface(self.notifyObject, 'org.freedesktop.Notifications')
@@ -349,6 +350,10 @@ class IndicatorTimekpr(object):
             ,[25*60,5*60,'low',self.limited_green,3]
             ,[9999999,10*60,'low',self.limited_green,4]
         )
+
+        if USE_DBUS:
+            # create a dict for urgencies
+            self.dbusUrgencies = {"low":0, "normal":1, "critical":2}
 
         # initial check of the limits
         self.reReadConfigAndcheckLimits()
@@ -610,7 +615,7 @@ class IndicatorTimekpr(object):
         # if dbus available
         if USE_DBUS:
             # notify
-            self.notifyInterface.Notify('Timekpr', 0, icon, title, message, '', '', durationMsecs)
+            self.notifyInterface.Notify('Timekpr', 0, icon, title, message, '', {"urgency":self.dbusUrgencies[urgency]}, durationMsecs)
             print "notification via dbus"
         # KDE uses different tech to notify users
         elif self.getSessionName() == 'KDE' and self.getSessionVersion(self.getSessionName()) == 3:

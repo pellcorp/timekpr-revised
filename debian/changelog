@@ -1,14 +1,22 @@
+timekpr-beta (0.3.6~ppa1~ubuntu5) UNRELEASED; urgency=medium
+
+  * Imported translations for Hungarian (thanks to SanskritFritz)
+  * Imported translations for Swedish (thanks to Åke Engelbrektson)
+  * Updated scripts / files for translations
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
 timekpr-beta (0.3.6~ppa1~ubuntu4) UNRELEASED; urgency=medium
 
   * Try to use dbus by default
-  * Dependancies list adjusted for dbus
+  * Dependencies list adjusted for dbus
 
  -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
 
 timekpr-beta (0.3.6~ppa1~ubuntu3) UNRELEASED; urgency=medium
 
   * Build fix (revert some changes from post* install scripts)
-  * Dependancies list fixed (affects Xenial)
+  * Dependencies list fixed (affects Xenial)
 
  -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
 

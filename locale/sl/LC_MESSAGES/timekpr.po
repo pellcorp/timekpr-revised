@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-03 08:48+0300\n"
+"POT-Creation-Date: 2016-05-04 19:23+0300\n"
 "PO-Revision-Date: 2016-05-03 09:03+0300\n"
 "Last-Translator: \n"
 "Language-Team: Valentin Korenjak\n"
@@ -25,7 +25,7 @@ msgid "About timekpr"
 msgstr "O timekpr"
 
 #: ../src/gui/about_dialog.ui:19 ../src/timekpr-gui.py:187
-#: ../src/timekpr-client.py:286
+#: ../src/timekpr-client.py:308
 msgid "Keep control of computer usage"
 msgstr "Nadzirajte uporabo računalnika"
 
@@ -65,7 +65,7 @@ msgstr ""
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
-#: ../src/timekpr-client.py:285
+#: ../src/timekpr-client.py:307
 msgid "translator-credits"
 msgstr "Valentin Korenjak"
 
@@ -239,8 +239,8 @@ msgid "You need to have administrative privileges to run timekpr-gui"
 msgstr ""
 "Za izvajanje aplikacije timekpr-gui potrebuješ administratorske privilegije"
 
-#: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:189
-#: ../src/timekpr-client.py:214
+#: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:202
+#: ../src/timekpr-client.py:227
 msgid "Timekpr Control Panel"
 msgstr "Nadzorna plošča Timekpr"
 
@@ -292,7 +292,7 @@ msgstr "Nastavljeni čas dostopa 00-24 na %(day)s za račun %(user)s"
 msgid "Refreshed setting values from account %s"
 msgstr "Nastavitve za račun %s so osvežene"
 
-#: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:543
+#: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
 msgid_plural "%(min)s minutes"
@@ -318,43 +318,43 @@ msgstr "Ned"
 msgid "Applied limit changes for account %s"
 msgstr "Aplicirane omejitve za račun %s"
 
-#: ../src/timekpr-client.py:183 ../src/timekpr-client.py:212
+#: ../src/timekpr-client.py:196 ../src/timekpr-client.py:225
 msgid "Time left..."
 msgstr "Preostali čas..."
 
-#: ../src/timekpr-client.py:186
+#: ../src/timekpr-client.py:199
 msgid "Properties"
 msgstr "Nepremičnine"
 
-#: ../src/timekpr-client.py:192
+#: ../src/timekpr-client.py:205
 msgid "About"
 msgstr "O"
 
-#: ../src/timekpr-client.py:246
+#: ../src/timekpr-client.py:268
 msgid "Timekpr Client Control Panel"
 msgstr "Timekpr Client Nadzorna plošča"
 
-#: ../src/timekpr-client.py:408
+#: ../src/timekpr-client.py:430
 msgid "You are early, you will be logged out in LESS than 2 minutes"
 msgstr "Prezgoden si, odjavili te bomo v MANJ kot dveh minutah"
 
-#: ../src/timekpr-client.py:412
+#: ../src/timekpr-client.py:434
 msgid "You are late, you will be logged out in LESS than 2 minutes"
 msgstr "Prepozen si, odjavili te bomo v MANJ kot dveh minutah"
 
-#: ../src/timekpr-client.py:416
+#: ../src/timekpr-client.py:438
 msgid "Your time is up, you will be logged out in LESS than 2 minutes"
 msgstr "Tvoj čas je potekel, odjavili te bomo v MANJ kot dveh minutah"
 
-#: ../src/timekpr-client.py:438
+#: ../src/timekpr-client.py:460
 msgid "Your time is not limited today"
 msgstr "Tvoj čas danes ni omejen"
 
-#: ../src/timekpr-client.py:522
+#: ../src/timekpr-client.py:544
 msgid "You have"
 msgstr "Imaš še"
 
-#: ../src/timekpr-client.py:527
+#: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
 msgid_plural "%(hour)s hours"
@@ -363,7 +363,7 @@ msgstr[1] "%(hour)s ura"
 msgstr[2] "%(hour)s uri"
 msgstr[3] "%(hour)s ure"
 
-#: ../src/timekpr-client.py:559
+#: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
 msgid_plural "%(sec)s seconds"
@@ -372,11 +372,11 @@ msgstr[1] "%(sec)s sekunda"
 msgstr[2] "%(sec)s sekundi"
 msgstr[3] "%(sec)s sekunde"
 
-#: ../src/timekpr-client.py:566
+#: ../src/timekpr-client.py:588
 msgid "left"
 msgstr " "
 
-#: ../src/timekpr-client.py:576
+#: ../src/timekpr-client.py:598
 msgid "Timekpr notification"
 msgstr "Timekpr obvestilo"
 

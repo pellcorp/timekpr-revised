@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-03 08:48+0300\n"
+"POT-Creation-Date: 2016-05-04 19:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "About timekpr"
 msgstr ""
 
 #: ../src/gui/about_dialog.ui:19 ../src/timekpr-gui.py:187
-#: ../src/timekpr-client.py:286
+#: ../src/timekpr-client.py:308
 msgid "Keep control of computer usage"
 msgstr ""
 
@@ -50,7 +50,7 @@ msgstr ""
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
-#: ../src/timekpr-client.py:285
+#: ../src/timekpr-client.py:307
 msgid "translator-credits"
 msgstr ""
 
@@ -211,8 +211,8 @@ msgstr ""
 msgid "You need to have administrative privileges to run timekpr-gui"
 msgstr ""
 
-#: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:189
-#: ../src/timekpr-client.py:214
+#: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:202
+#: ../src/timekpr-client.py:227
 msgid "Timekpr Control Panel"
 msgstr ""
 
@@ -264,7 +264,7 @@ msgstr ""
 msgid "Refreshed setting values from account %s"
 msgstr ""
 
-#: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:543
+#: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
 msgid_plural "%(min)s minutes"
@@ -288,60 +288,60 @@ msgstr ""
 msgid "Applied limit changes for account %s"
 msgstr ""
 
-#: ../src/timekpr-client.py:183 ../src/timekpr-client.py:212
+#: ../src/timekpr-client.py:196 ../src/timekpr-client.py:225
 msgid "Time left..."
 msgstr ""
 
-#: ../src/timekpr-client.py:186
+#: ../src/timekpr-client.py:199
 msgid "Properties"
 msgstr ""
 
-#: ../src/timekpr-client.py:192
+#: ../src/timekpr-client.py:205
 msgid "About"
 msgstr ""
 
-#: ../src/timekpr-client.py:246
+#: ../src/timekpr-client.py:268
 msgid "Timekpr Client Control Panel"
 msgstr ""
 
-#: ../src/timekpr-client.py:408
+#: ../src/timekpr-client.py:430
 msgid "You are early, you will be logged out in LESS than 2 minutes"
 msgstr ""
 
-#: ../src/timekpr-client.py:412
+#: ../src/timekpr-client.py:434
 msgid "You are late, you will be logged out in LESS than 2 minutes"
 msgstr ""
 
-#: ../src/timekpr-client.py:416
+#: ../src/timekpr-client.py:438
 msgid "Your time is up, you will be logged out in LESS than 2 minutes"
 msgstr ""
 
-#: ../src/timekpr-client.py:438
+#: ../src/timekpr-client.py:460
 msgid "Your time is not limited today"
 msgstr ""
 
-#: ../src/timekpr-client.py:522
+#: ../src/timekpr-client.py:544
 msgid "You have"
 msgstr ""
 
-#: ../src/timekpr-client.py:527
+#: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
 msgid_plural "%(hour)s hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/timekpr-client.py:559
+#: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
 msgid_plural "%(sec)s seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/timekpr-client.py:566
+#: ../src/timekpr-client.py:588
 msgid "left"
 msgstr ""
 
-#: ../src/timekpr-client.py:576
+#: ../src/timekpr-client.py:598
 msgid "Timekpr notification"
 msgstr ""

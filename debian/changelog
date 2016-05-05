@@ -1,6 +1,6 @@
 timekpr-beta (0.3.6~ppa1~ubuntu6) UNRELEASED; urgency=medium
 
-  * Fixed dbus urgency
+  * Fixed dbus notification urgency
 
  -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
 

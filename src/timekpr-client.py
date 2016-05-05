@@ -173,8 +173,8 @@ def init_espeak():
     if USE_SPEECH:
         # set up speech synth
         espeak.set_voice(get_language());
-        espeak.set_parameter(espeak.Parameter.Pitch, 10)
-        espeak.set_parameter(espeak.Parameter.Rate, 135)
+        espeak.set_parameter(espeak.Parameter.Pitch, 1)
+        espeak.set_parameter(espeak.Parameter.Rate, 145)
         espeak.set_parameter(espeak.Parameter.Range, 600)
 
 class IndicatorTimekpr(object):

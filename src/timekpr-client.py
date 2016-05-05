@@ -240,7 +240,7 @@ class IndicatorTimekpr(object):
                 self.sessionDbus = dbus.SessionBus()
                 self.notifyObject = self.sessionDbus.get_object('org.freedesktop.Notifications', '/org/freedesktop/Notifications')
                 self.notifyInterface = dbus.Interface(self.notifyObject, 'org.freedesktop.Notifications')
-            except ImportError:
+            except:
                 USE_DBUS = False
                 pass
 
@@ -293,7 +293,6 @@ class IndicatorTimekpr(object):
         import subprocess
         rc = subprocess.call(['pkexec', 'timekpr-gui'])
 
-    #def onPopupMenu(self, status, button, time):
     def onPopupMenu(self, status, button, time):
         self.popup.popup(None, None, None, None, 0, time)
 
@@ -340,7 +339,7 @@ class IndicatorTimekpr(object):
 
         # nobody wanted info by clicking on the icon and other default stuff
         self.click = False
-        self.firstNotif = VAR['SHOW_FIRST_NOTIFICATION']
+        self.firstNotif = True
         self.notifTimer = None
         self.timeSpentPrev = self.getTime(self.timefile)
         self.notificationLimits = (
@@ -358,10 +357,13 @@ class IndicatorTimekpr(object):
         # initial check of the limits
         self.reReadConfigAndcheckLimits()
 
+        # set up first notification as per config
+        self.firstNotif = VAR['SHOW_FIRST_NOTIFICATION']
+
         # add a GLib loop to check limits:
         GLib.timeout_add_seconds(self.checkInterval, self.reReadConfigAndcheckLimits)
 
-        # add a notifier for the first time to half minuten
+        # add a notifier for the first time to one second
         self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
 
     def reReadConfigAndcheckLimits(self):
@@ -379,8 +381,10 @@ class IndicatorTimekpr(object):
             # user is not limited
             if self.isAppIndicator:
                 self.ind.set_icon(self.unlimited_green)
-            else:
+                self.ind.set_label("", "")
+           else:
                 self.tray.set_from_file(self.unlimited_green)
+                self.tray.set_tooltip_text("")
 
             # come back later
             return True
@@ -455,12 +459,8 @@ class IndicatorTimekpr(object):
         # get the day
         index = int(strftime("%w"))
 
-        # if there is time to check
-        # -0.1 means timefile does not exist
-        if self.getTime(self.timefile) == -0.1:
-            return result
         # if the user is not a restricted user for this day
-        elif not isrestricteduser(self.username, self.limits[index]):
+        if not isrestricteduser(self.username, self.limits[index]):
             if self.firstNotif or self.click:
                 self.notifyUser(_('Your time is not limited today'), 'low')
                 self.click = False
@@ -468,6 +468,10 @@ class IndicatorTimekpr(object):
                 # restricted user - no more notifs
                 self.timerLevelInEffect = 0
             result = False
+        # if there is time to check
+        # -0.1 means timefile does not exist
+        elif self.getTime(self.timefile) == -0.1:
+            return result
 
         # first notification is no more
         self.firstNotif = False

@@ -382,7 +382,7 @@ class IndicatorTimekpr(object):
             if self.isAppIndicator:
                 self.ind.set_icon(self.unlimited_green)
                 self.ind.set_label("", "")
-           else:
+            else:
                 self.tray.set_from_file(self.unlimited_green)
                 self.tray.set_tooltip_text("")
 

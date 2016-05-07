@@ -364,7 +364,7 @@ class IndicatorTimekpr(object):
         GLib.timeout_add_seconds(self.checkInterval, self.reReadConfigAndcheckLimits)
 
         # add a notifier for the first time to one second
-        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect+5, self.regularNotifier)
+        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
 
     def reReadConfigAndcheckLimits(self):
         # defaults

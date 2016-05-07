@@ -1,1 +1,6 @@
 doc/timekpr.8
+doc/timekpr.conf.5
+doc/timekpr-client.8
+doc/timekpr-gui3.8
+doc/timekpr-gui.8
+doc/users.timekpr.8

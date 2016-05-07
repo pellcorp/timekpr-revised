@@ -1,4 +1,5 @@
 #!/bin/sh
+
 afile='/etc/security/access.conf'
 tfile='/etc/security/time.conf'
 timekprwork=/var/lib/timekpr

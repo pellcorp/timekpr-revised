@@ -1,105 +1,132 @@
-
-.TH TIMEKPR 8 "NOVEMBER 2008" Linux "User Manuals"
-.SH TIMEKPR 
-timekpr \- keep control of computer usage
+.\" Man page generated from reStructuredText.
+.
+.TH TIMEKPR 8 "2014-09-24" "0.3.6" "User Manuals"
+.SH NAME
+timekpr \- Keep control of computer usage
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Manual page for timekpr daemon written in rst.
+.
+.\" Can be converted using rst2man, which in trusty is in the package "python-docutils"
+.
+.\" 
+.
+.\" rst Reference: http://docutils.sf.net/docs/user/rst/quickref.html
+.
+.\" 
+.
+.\" man-pages can have these parts:
+.
+.\" NAME
+.
+.\" SYNOPSIS
+.
+.\" CONFIGURATION         [Normally only in Section 4]
+.
+.\" DESCRIPTION
+.
+.\" OPTIONS.. [Normally only in Sections 1, 8]
+.
+.\" EXIT STATUS          [Normally only in Sections 1, 8]
+.
+.\" RETURN VALUE  [Normally only in Sections 2, 3]
+.
+.\" ERRORS.. [Typically only in Sections 2, 3]
+.
+.\" ENVIRONMENT
+.
+.\" FILES
+.
+.\" VERSIONS              [Normally only in Sections 2, 3]
+.
+.\" CONFORMING TO
+.
+.\" NOTES
+.
+.\" BUGS
+.
+.\" EXAMPLE
+.
+.\" SEE ALSO
+.
 .SH SYNOPSIS
-.B timekpr 
+.sp
+\fBtimekpr\fP
 .SH DESCRIPTION
-.B timekpr 
-tracks and controls the computer usage of user accounts. 
-Using 
-.B timekpr-gui(8), 
-the administrator can limit daily usage per user by configuring
-
-.IP . 
-a daytime range (e.g. from 8am to 7pm) when to user is allowed to work.
-
-.IP . 
-an elapsed time (e.g. 90 minutes) the user is allowed to work per day.
-
-.PP 
-.B timekpr
-allows users to login or to stay logged in only as long as both limits are met.
-As long as a user hasn't any limits configured,
-.B timekpr
-does not do any monitoring or other actions on that user.
-
-To
-.I disallow logins outside the defined daytime range,
-.B timekpr
-relies on the settings in the configuration file for the 
-.I time
-PAM-Module entered by 
-.B timekpr-gui.
-
-To disallow users 
-.I to stay logged in over the defined daytime range,
-or
-.I to stay logged in over the defined elapsed time,
-.B timekpr 
-checks the process tree at regular intervals. When a certain 
-user is logged in, the file
-.I /var/lib/timekpr/<username>.time
-is updated to contain the new
-elapsed time. This time is then checked against the total allowed
-(stored in 
-.I /etc/timekpr/<username>
-).
-
-
-When
-.B timekpr
-discovers a user violating its limits, the user is warned and given a grace
-period to save his work. After this grace period, the user is 
-.I kicked out
-by killing its processes. In addition, the file 
-.I /var/lib/timekpr/<username>.logout
-is touched to state the fact that the user has been logged out forcibly by 
-.B timekpr.
-
-When the user tries to login again (within its daytime range, but all elapsed time
-used up), it is kicked out immediately and then locked by editing the
-config file for the 
-.I access
-PAM-Module. Now the user cannot login any more.
-
+.sp
+\fBtimekpr\fP tracks and controls the computer usage of user accounts. Using \fBtimekpr\-gui(8)\fP, the administrator can limit daily usage per user by configuring
+.INDENT 0.0
+.IP \(bu 2
+a daytime range (e.g. from 8am to 7pm) when the user is allowed to log on
+.IP \(bu 2
+an elapsed time (e.g. 90 minutes) the user is allowed to log on per day
+.UNINDENT
+.sp
+\fBtimekpr\fP allows users to login or to stay logged in only as long as both limits are met. As long as a user hasn\(aqt any limits configured, \fBtimekpr\fP does not do any monitoring or other
+actions on that user.
+.sp
+To disallow logins outside the defined daytime range, timekpr relies on the settings in the configuration file for the time PAM\-Module entered by \fBtimekpr\-gui\fP\&.
+.sp
+To disallow users to stay logged in over the defined daytime range, or to stay logged in over the defined elapsed time, \fBtimekpr\fP checks the process tree at regular intervals. When a cer‐
+tain user is logged in, the file \fI/var/lib/timekpr/<username>.time\fP is updated to contain the new elapsed time. This time is then checked against the total allowed (stored in
+\fI/etc/timekpr/<username>\fP).
+.sp
+When \fBtimekpr\fP discovers a user violating its limits, the user is warned and given a grace period to save his work. After this grace period, the user is kicked out by killing its pro‐
+cesses. In addition, the file \fI/var/lib/timekpr/<username>.logout\fP is touched to state the fact that the user has been logged out forcibly by \fBtimekpr\fP\&.
+.sp
+When the user tries to login again (within its daytime range, but all elapsed time used up), it is kicked out immediately and then locked by editing the config file for the access PAM\-
+Module. Now the user cannot login any more.
 .SH FILES
-.I /etc/timekpr.conf
-.RS 
-The system wide configuration file. See
-.BR timekpr.conf (5)
-for further details.
-.RE
-.I /etc/security/time.conf
-.I /etc/security/access.conf
-.RS 
+.INDENT 0.0
+.TP
+.B \fI/etc/timekpr.conf\fP
+The system wide configuration file. See \fBtimekpr.conf(5)\fP for further details.
+.TP
+.B \fI/etc/security/time.conf\fP, \fI/etc/security/access.conf\fP
 The system wide PAM Configuration files for the time and and access modules.
-
+.UNINDENT
 .SH DIAGNOSTICS
-The logfile is quite verbose:
-.I /var/log/timekpr.log
-. The logfile can located elsewhere, check the config file.
-
+.sp
+The logfile is quite verbose: \fI/var/log/timekpr.log\fP
 .SH BUGS
-.B timekpr 
-is in an early development stage. Please check https://bugs.launchpad.net/timekpr/+bugs 
-
-
+.sp
+Please report bugs to the bugtracker at \fI\%https://bugs.launchpad.net/timekpr/+bugs\fP
 .SH AUTHORS
+.sp
 Chris Jackson wrote the original bash script.
-
-Even Nedberg and Savvas Radevic wrote the current python implementation.
-
-Nicolas Iselin wrote this manpage.
-
+.sp
+Even Nedberg, Savvas Radevic, and Frank Gerbig wrote the current python implementation.
+.sp
+Nicolas Iselin, Savvas Radevic, and Frank Gerbig wrote the manpages.
 .SH SEE ALSO
-.BR timekpr.conf (5),
-.BR timekpr-gui (8),
-The
-.BR "Linux-PAM guide for system administrators" 
-(modules 
-.BR access
-and
-.BR limits)
-
-
+.sp
+\fBtimekpr(8)\fP, \fBtimekpr.conf(5)\fP, \fBtimekpr\-gui(8)\fP, \fBtimekpr\-gui3(8)\fP, \fBtimekpr\-client(8)\fP, The \fBLinux\-PAM guide for system administrators\fP (modules \fBaccess\fP and \fBlimits\fP).
+.SH COPYRIGHT
+timekpr is licensed under the GNU GPLv3, the documentation is licensed under the GNU Free Documentation License.
+.\" Generated by docutils manpage writer.
+.

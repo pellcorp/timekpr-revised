@@ -1,10 +1,9 @@
 #!/usr/bin/make -f
 
-DEB_PYTHON_SYSTEM=pysupport
-
 clean:
-	dh $@
-	rm -rf ".bzr"
+	find . -name "*.pyc" -delete
+	doc/update.sh
+	dh $@ --with python2
 
 %:
-	dh $@
+	dh $@ --with python2

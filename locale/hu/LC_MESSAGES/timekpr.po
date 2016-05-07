@@ -1,0 +1,368 @@
+# Hungarian translation for timekpr-revived
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the timekpr-revived package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: timekpr-revived\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-04 20:22+0300\n"
+"PO-Revision-Date: 2016-05-04 20:33+0300\n"
+"Last-Translator: \n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-05-04 16:08+0000\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../src/gui/about_dialog.ui:9
+msgid "About timekpr"
+msgstr "Timekpr névjegye"
+
+#: ../src/gui/about_dialog.ui:19 ../src/timekpr-gui.py:187
+#: ../src/timekpr-client.py:308
+msgid "Keep control of computer usage"
+msgstr "Tartsa felügyelet alatt a számítógéphasználatot"
+
+#: ../src/gui/about_dialog.ui:21
+msgid "http://launchpad.net/timekpr-revived"
+msgstr "http://launchpad.net/timekpr-revived"
+
+#: ../src/gui/about_dialog.ui:22
+msgid ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>. In Debian, see "
+"file /usr/share/common-licenses/GPL-3"
+msgstr ""
+
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
+#: ../src/timekpr-client.py:307
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  SanskritFritz https://launchpad.net/~sanskritfritz+launchpad"
+
+#: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
+msgid "timekpr"
+msgstr "timekpr"
+
+#: ../src/gui/client.ui:26 ../src/gui/main_window.ui:148
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../src/gui/client.ui:114
+msgid "User:"
+msgstr "Felhasználó:"
+
+#: ../src/gui/client.ui:198
+msgid "Show notification at logon?"
+msgstr "Itt található az értesítés bejelentkezéskor?"
+
+#: ../src/gui/client.ui:216
+msgid "Use speech notifications?"
+msgstr "Használja beszéd értesítéseket?"
+
+#: ../src/gui/client.ui:238
+msgid "Notifications"
+msgstr "Értesítések"
+
+#: ../src/gui/main_window.ui:235
+msgid "Select user"
+msgstr "Válasszon felhasználót"
+
+#: ../src/gui/main_window.ui:351
+msgid "Bypass for today"
+msgstr "Mára nincs korlátozás"
+
+#: ../src/gui/main_window.ui:378
+msgid ""
+"Able to login all day today:\n"
+"(Also active bypass)"
+msgstr ""
+"Ma beléphet egész nap:\n"
+"(Valamint aktív kerülőút)"
+
+#: ../src/gui/main_window.ui:444
+msgid "Reset time"
+msgstr "Az idő visszaállítása"
+
+#: ../src/gui/main_window.ui:497
+msgid ""
+"Add time\n"
+"Reward / Penalty"
+msgstr ""
+"Idő hozzáadása\n"
+"Jutalom / Büntetés"
+
+#: ../src/gui/main_window.ui:542 ../src/gui/main_window.ui:1182
+msgid "minutes"
+msgstr "perc"
+
+#: ../src/gui/main_window.ui:638
+msgid "Clear all restrictions"
+msgstr "Minden korlátozás feloldása"
+
+#: ../src/gui/main_window.ui:693
+msgid "Unlock Account"
+msgstr "Felhasználó feloldása"
+
+#: ../src/gui/main_window.ui:763
+msgid "-"
+msgstr "-"
+
+#: ../src/gui/main_window.ui:778
+msgid "Status for <span weight=\"bold\">username</span>"
+msgstr "<span weight=\"bold\">username</span> állapota"
+
+#: ../src/gui/main_window.ui:796
+msgid "Time left:"
+msgstr "Hátralévő idő:"
+
+#: ../src/gui/main_window.ui:811
+msgid "Account locked:"
+msgstr "Felhasználó zárolva:"
+
+#: ../src/gui/main_window.ui:826
+msgid "Limited by time frame (any day):"
+msgstr "Hozzáférés határidői korlátozottak (minden napra):"
+
+#: ../src/gui/main_window.ui:841
+msgid "Limited by access duration (any day):"
+msgstr "Hozzáférés időtartama korlátozott (minden napra):"
+
+#: ../src/gui/main_window.ui:856
+msgid "Status"
+msgstr "Állapot"
+
+#: ../src/gui/main_window.ui:890
+msgid ""
+"Limit user access by defining the time duration\n"
+"(how long the user is logged in)"
+msgstr ""
+"A felhasználó hozzáférésének korlátozása\n"
+"azzal, hogy megszabjuk, meddig maradhat belépve"
+
+#: ../src/gui/main_window.ui:922
+msgid "Limit access duration"
+msgstr "Hozzáférés időtartamának korlátozása"
+
+#: ../src/gui/main_window.ui:952 ../src/gui/main_window.ui:1448
+msgid "Sat"
+msgstr "Szo"
+
+#: ../src/gui/main_window.ui:985 ../src/gui/main_window.ui:1433
+msgid "Fri"
+msgstr "Pén"
+
+#: ../src/gui/main_window.ui:1018 ../src/gui/main_window.ui:1418
+msgid "Thu"
+msgstr "Csü"
+
+#: ../src/gui/main_window.ui:1051 ../src/gui/main_window.ui:1403
+msgid "Wed"
+msgstr "Sze"
+
+#: ../src/gui/main_window.ui:1084 ../src/gui/main_window.ui:1388
+msgid "Tue"
+msgstr "Ked"
+
+#: ../src/gui/main_window.ui:1117 ../src/gui/main_window.ui:1373
+msgid "Mon"
+msgstr "Hét"
+
+#: ../src/gui/main_window.ui:1150 ../src/gui/main_window.ui:1358
+#: ../src/timekpr-gui.py:520 ../src/timekpr-gui.py:545
+msgid "Every day"
+msgstr "Minden nap"
+
+#: ../src/gui/main_window.ui:1194 ../src/gui/main_window.ui:1287
+msgid "Configure per day"
+msgstr "Napokra bontva"
+
+#: ../src/gui/main_window.ui:1232
+msgid ""
+"Limit user access by defining the hours\n"
+"when user is allowed to login"
+msgstr ""
+"A felhasználó hozzáférésének korlátozása\n"
+"azzal, hogy megszabjuk, mikor léphet be"
+
+#: ../src/gui/main_window.ui:1264
+msgid "Limit time frame"
+msgstr "A hozzáférés idejének korlátozása"
+
+#: ../src/gui/main_window.ui:1326
+msgid "from"
+msgstr "ettől"
+
+#: ../src/gui/main_window.ui:1342
+msgid "to"
+msgstr "eddig:"
+
+#: ../src/gui/main_window.ui:1734
+msgid "Limits & Boundaries"
+msgstr "Korlátok és határok"
+
+#: ../src/timekpr-gui.py:51
+msgid "You need to have administrative privileges to run timekpr-gui"
+msgstr "A timekpr-gui futtatásához adminisztrátori jogokra van szükség"
+
+#: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:202
+#: ../src/timekpr-client.py:227
+msgid "Timekpr Control Panel"
+msgstr "Timekpr vezérlőpult"
+
+#: ../src/timekpr-gui.py:103
+msgid "Timekpr Client"
+msgstr "Timekpr kliens"
+
+#: ../src/timekpr-gui.py:166
+msgid ""
+"You need to have at least one normal user available to configure timekpr"
+msgstr ""
+"Legalább még egy felhasználónak léteznie kell ahhoz, hogy a timekpr "
+"beállítható legyen."
+
+#: ../src/timekpr-gui.py:193 ../src/timekpr-gui.py:447
+msgid "Lock account"
+msgstr "Felhasználó zárolása"
+
+#: ../src/timekpr-gui.py:196
+#, python-format
+msgid "Locked account %s"
+msgstr "Zárolt felhasználó: %s"
+
+#: ../src/timekpr-gui.py:209
+#, python-format
+msgid "Unlocked account %s"
+msgstr "Szabad felhasználó %s"
+
+#: ../src/timekpr-gui.py:233
+#, python-format
+msgid "Removed all restrictions for account %s"
+msgstr "%s összes korlátozását feloldottam"
+
+#: ../src/timekpr-gui.py:241
+#, python-format
+msgid "Cleared used up time for account %s"
+msgstr "Visszaállítottam %s felhasználható idejét"
+
+#: ../src/timekpr-gui.py:258
+#, python-format
+msgid "Applied reward of %(num)s minute(s) to account %(user)s"
+msgstr "%(user)s számára %(num)s perc jutalmat adtam"
+
+#: ../src/timekpr-gui.py:275
+#, python-format
+msgid "Set access hours to 00-24 on %(day)s for account %(user)s"
+msgstr "00-24 hozzáférés %(user)s számára %(day)s napon"
+
+#: ../src/timekpr-gui.py:280
+#, python-format
+msgid "Refreshed setting values from account %s"
+msgstr "%s beállításai frissítve lettek"
+
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
+#: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
+#, python-format
+msgid "%(min)s minute"
+msgid_plural "%(min)s minutes"
+msgstr[0] "%(min)s perced"
+msgstr[1] "%(min)s perced"
+
+#: ../src/timekpr-gui.py:445
+msgid "Unlock account"
+msgstr "Felhasználó megnyitása"
+
+#: ../src/timekpr-gui.py:482
+msgid "Status for"
+msgstr "Státusz:"
+
+#: ../src/timekpr-gui.py:514 ../src/timekpr-gui.py:540
+msgid "Sun"
+msgstr "Vas"
+
+#: ../src/timekpr-gui.py:592
+#, python-format
+msgid "Applied limit changes for account %s"
+msgstr "%s korlátozásait megváltoztattam"
+
+#: ../src/timekpr-client.py:196 ../src/timekpr-client.py:225
+msgid "Time left..."
+msgstr "Fennmaradó idő..."
+
+#: ../src/timekpr-client.py:199
+msgid "Properties"
+msgstr "Tulajdonságok"
+
+#: ../src/timekpr-client.py:205
+msgid "About"
+msgstr "Ról ről"
+
+#: ../src/timekpr-client.py:268
+msgid "Timekpr Client Control Panel"
+msgstr "Timekpr ügyfél vezérlőpult"
+
+#: ../src/timekpr-client.py:430
+msgid "You are early, you will be logged out in LESS than 2 minutes"
+msgstr "Túl korán léptél be, kidoblak 2 percen belül!"
+
+#: ../src/timekpr-client.py:434
+msgid "You are late, you will be logged out in LESS than 2 minutes"
+msgstr "Túl későn léptél be, kidoblak 2 percen belül!"
+
+#: ../src/timekpr-client.py:438
+msgid "Your time is up, you will be logged out in LESS than 2 minutes"
+msgstr "Elfogyott az időd, kidoblak 2 percen belül!"
+
+#: ../src/timekpr-client.py:460
+msgid "Your time is not limited today"
+msgstr "Mára nincs időkorlátod"
+
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
+#: ../src/timekpr-client.py:544
+msgid "You have"
+msgstr "Van még"
+
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
+#: ../src/timekpr-client.py:549
+#, python-format
+msgid "%(hour)s hour"
+msgid_plural "%(hour)s hours"
+msgstr[0] "%(hour)s órád"
+msgstr[1] "%(hour)s órád"
+
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
+#: ../src/timekpr-client.py:581
+#, python-format
+msgid "%(sec)s second"
+msgid_plural "%(sec)s seconds"
+msgstr[0] "%(sec)s mp"
+msgstr[1] "%(sec)s mp"
+
+#. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
+#: ../src/timekpr-client.py:588
+msgid "left"
+msgstr "időd"
+
+#: ../src/timekpr-client.py:598
+msgid "Timekpr notification"
+msgstr "Timekpr üzenet"
+
+#~ msgid "\tSun\t "
+#~ msgstr "\tVas\t "

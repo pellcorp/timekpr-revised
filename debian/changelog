@@ -1,3 +1,92 @@
+timekpr (0.3.6~ppa1~ubuntu10) UNRELEASED; urgency=medium
+
+  * prepare release
+  * cleanup, build fixes & reorg for project to make it more streamlined
+  * fixes bug #1487883 (base packaging)
+  * speech synth implemented using python-espeak
+  * added speech, first notification options and about menu (thanks to Frank Gerbig)
+  * UI ported to GTK3 (thanks to Frank Gerbig)
+  * loginctl now filters only active users (thanks to Etienne URBAH)
+  * fixed project depends (included python-espeak & polkit for pkexec)
+  * Ubuntu 16.04 support (still try to maintain it for active releases and alternative DE's)
+  * Slovenian translations (thanks to Valentin Korenjak)
+  * Imported translations for Hungarian (thanks to SanskritFritz)
+  * Imported translations for Swedish (thanks to Åke Engelbrektson)
+  * Updated scripts / files for translations
+  * Using DBUS for notifications where it's possible
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 7 May 2016 15:31:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu8) UNRELEASED; urgency=medium
+
+  * Fixed stupid bug with python identication
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 6 May 2016 19:03:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu7) UNRELEASED; urgency=medium
+
+  * Fixed dependencies for Kubuntu's
+  * Fixed startup icon setup
+  * Fixed time information when changing limited user to non-limited
+  * Aditional tests done in KDE/MATE/Cinnamon
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 5 May 2016 19:03:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu6) UNRELEASED; urgency=medium
+
+  * Fixed dbus notification urgency
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu5) UNRELEASED; urgency=medium
+
+  * Imported translations for Hungarian (thanks to SanskritFritz)
+  * Imported translations for Swedish (thanks to Åke Engelbrektson)
+  * Updated scripts / files for translations
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu4) UNRELEASED; urgency=medium
+
+  * Try to use dbus by default
+  * Dependencies list adjusted for dbus
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu3) UNRELEASED; urgency=medium
+
+  * Build fix (revert some changes from post* install scripts)
+  * Dependencies list fixed (affects Xenial)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu2) UNRELEASED; urgency=medium
+
+  * Trying to fix build on Precise
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu1) UNRELEASED; urgency=medium
+
+  * Fixed last minute bug for users.timekpr
+  * Fix clean so it won't delete my bzr repo
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
+timekpr-beta (0.3.6~ppa1~ubuntu0) UNRELEASED; urgency=medium
+
+  * cleanup, build fixes & reorg for project to make it more streamlined
+  * fixes bug #1487883 (base packaging)
+  * speech synth implemented using python
+  * added speech, first notification options and about menu (thanks to Frank Gerbig)
+  * UI ported to GTK3 (thanks to Frank Gerbig)
+  * loginctl now filters only active users (thanks to Etienne URBAH)
+  * fixed project depends (included python-espeak & polkit for pkexec)
+  * Ubuntu 16.04 support (still try to maintain it for active releases and alternative DE's)
+  * Slovenian translations (thanks to Valentin Korenjak)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 4 May 2016 19:03:18 +0300
+
 timekpr (0.3.5~ppa1~ubuntu10) UNRELEASED; urgency=medium
 
   * fixes bug #1467654 (from original timekpr repo)

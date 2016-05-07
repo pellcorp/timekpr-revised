@@ -1,3 +1,9 @@
+timekpr-beta (0.3.6~ppa1~ubuntu9) UNRELEASED; urgency=medium
+
+  * Release bump
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 6 May 2016 19:03:18 +0300
+
 timekpr-beta (0.3.6~ppa1~ubuntu8) UNRELEASED; urgency=medium
 
   * Fixed stupid bug with python identication

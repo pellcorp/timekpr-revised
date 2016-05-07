@@ -352,7 +352,7 @@ class IndicatorTimekpr(object):
 
         if USE_DBUS:
             # create a dict for urgencies
-            self.dbusUrgencies = {"low":0, "normal":1, "critical":2}
+            self.dbusUrgencies = {"low":dbus.Byte(0, variant_level=1), "normal":dbus.Byte(1, variant_level=1), "critical":dbus.Byte(2, variant_level=1)}
 
         # initial check of the limits
         self.reReadConfigAndcheckLimits()
@@ -364,7 +364,7 @@ class IndicatorTimekpr(object):
         GLib.timeout_add_seconds(self.checkInterval, self.reReadConfigAndcheckLimits)
 
         # add a notifier for the first time to one second
-        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
+        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect+5, self.regularNotifier)
 
     def reReadConfigAndcheckLimits(self):
         # defaults

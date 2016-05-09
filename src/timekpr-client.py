@@ -179,9 +179,6 @@ def init_espeak():
 
 class IndicatorTimekpr(object):
     def __init__(self):
-        # changeable global variables
-        global USE_DBUS
-
         # get which DE we are running
         self.isAppIndicator = (os.getenv('XDG_CURRENT_DESKTOP') == "Unity") and USE_INDICATOR
 
@@ -232,17 +229,6 @@ class IndicatorTimekpr(object):
             uimanager.add_ui_from_string(UI_POPUPMENU)
             uimanager.insert_action_group(action_group)
             self.popup = uimanager.get_widget("/PopupMenu")
-
-        # trying to get on the bus
-        if USE_DBUS:
-            try:
-                # dbus connection
-                self.sessionDbus = dbus.SessionBus()
-                self.notifyObject = self.sessionDbus.get_object('org.freedesktop.Notifications', '/org/freedesktop/Notifications')
-                self.notifyInterface = dbus.Interface(self.notifyObject, 'org.freedesktop.Notifications')
-            except:
-                USE_DBUS = False
-                pass
 
         # initialize timekpr related stuff
         self.initTimekpr()
@@ -350,6 +336,7 @@ class IndicatorTimekpr(object):
             ,[9999999,10*60,'low',self.limited_green,4]
         )
 
+        # this is needed only if DBUS is used
         if USE_DBUS:
             # create a dict for urgencies
             self.dbusUrgencies = {"low":dbus.Byte(0, variant_level=1), "normal":dbus.Byte(1, variant_level=1), "critical":dbus.Byte(2, variant_level=1)}
@@ -364,7 +351,7 @@ class IndicatorTimekpr(object):
         GLib.timeout_add_seconds(self.checkInterval, self.reReadConfigAndcheckLimits)
 
         # add a notifier for the first time to one second
-        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
+        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect+8, self.initNotificatioDelivery)
 
     def reReadConfigAndcheckLimits(self):
         # defaults
@@ -449,6 +436,29 @@ class IndicatorTimekpr(object):
         # done
         return True
 
+    # initialize anything related to notifications and send first notification (called from glib timer)
+    def initNotificatioDelivery(self):
+        # changeable global variables
+        global USE_DBUS
+
+        # trying to get on the bus
+        if USE_DBUS:
+            try:
+                # dbus connection
+                self.sessionDbus = dbus.SessionBus()
+                self.notifyObject = self.sessionDbus.get_object('org.freedesktop.Notifications', '/org/freedesktop/Notifications')
+                self.notifyInterface = dbus.Interface(self.notifyObject, 'org.freedesktop.Notifications')
+            except:
+                USE_DBUS = False
+                pass
+
+        # add call very shortly
+        self.timerLevelInEffect = 1
+        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
+
+        # limit this to one call (called from timer, has to return False not to repeat the message)
+        return False
+
     # periodic notifier, gives notifications to the user
     def regularNotifier(self):
         # default values
@@ -483,7 +493,7 @@ class IndicatorTimekpr(object):
 
             # if the time is up, notifications is taken care of by reReadConfigAndcheckLimits
             if left < 0:
-                # handled in read congig
+                # handled in read config
                 self.timerLevelInEffect = 0
                 result = False
 

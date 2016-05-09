@@ -1,3 +1,9 @@
+timekpr (0.3.6~ppa1~ubuntu11) UNRELEASED; urgency=medium
+
+  * fix race condition with DBUS connection / notification object
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 9 May 2016 19:06:18 +0300
+
 timekpr (0.3.6~ppa1~ubuntu10) UNRELEASED; urgency=medium
 
   * prepare release

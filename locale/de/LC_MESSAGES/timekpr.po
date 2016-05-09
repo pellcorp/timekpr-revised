@@ -1,20 +1,21 @@
 #
 # Eduards Bezverhijs <edzis@inbox.lv>, 2014.
 # Kai Springstein <no@spam.org>, 2014.
+# Frank Gerbig <fgerbig@sourceforge.net>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-04 20:22+0300\n"
-"PO-Revision-Date: 2016-05-04 20:33+0300\n"
-"Last-Translator: \n"
-"Language-Team: Kai Springstein\n"
+"PO-Revision-Date: 2016-05-09 13:07+0200\n"
+"Last-Translator: Frank Gerbig <fgerbig@sourceforge.net>\n"
+"Language-Team: Deutsch <>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -52,12 +53,44 @@ msgid ""
 "this program.  If not, see <http://www.gnu.org/licenses/>. In Debian, see "
 "file /usr/share/common-licenses/GPL-3"
 msgstr ""
+"* Inoffizielle deutsche Übersetzung *\n"
+"Dieses Programm ist freie Software. Sie können es unter den Bedingungen der "
+"GNU General Public License, wie von der Free Software Foundation "
+"veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 "
+"der Lizenz oder (nach Ihrer Option) jeder späteren Version.\n"
+"\n"
+"Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, daß es Ihnen "
+"von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die "
+"implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN "
+"BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\n"
+"\n"
+"Sie sollten ein Exemplar der GNU General Public License zusammen mit diesem "
+"Programm erhalten haben. Falls nicht, siehe <http://www.gnu.org/licenses/>. "
+"Unter Debian, siehe /usr/share/common-licenses/GPL-3\n"
+"\n"
+"\n"
+"* Englischer Originaltext *\n"
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation, either version 3 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>. In Debian, see "
+"file /usr/share/common-licenses/GPL-3"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
 #: ../src/timekpr-client.py:307
 msgid "translator-credits"
-msgstr "Kai Springstein"
+msgstr ""
+"Kai Springstein\n"
+"Frank Gerbig"
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
 msgid "timekpr"
@@ -73,11 +106,11 @@ msgstr "Benutzer:"
 
 #: ../src/gui/client.ui:198
 msgid "Show notification at logon?"
-msgstr "Zeigen Sie Benachrichtigung bei der Anmeldung?"
+msgstr "Benachrichtigung bei der Anmeldung anzeigen?"
 
 #: ../src/gui/client.ui:216
 msgid "Use speech notifications?"
-msgstr "Verwenden Sie Sprachbenachrichtigungen?"
+msgstr "Sprachbenachrichtigungen verwenden?"
 
 #: ../src/gui/client.ui:238
 msgid "Notifications"
@@ -141,11 +174,11 @@ msgstr "Konto gesperrt:"
 
 #: ../src/gui/main_window.ui:826
 msgid "Limited by time frame (any day):"
-msgstr "Durch Zeitrahmen beschränkt (jeden Tag):"
+msgstr "Anmeldezeitpunkt begrenzt (jeden Tag):"
 
 #: ../src/gui/main_window.ui:841
 msgid "Limited by access duration (any day):"
-msgstr "Zugangsdauer limitiert (jeden Tag):"
+msgstr "Nutzungsdauer begrenzt (jeden Tag):"
 
 #: ../src/gui/main_window.ui:856
 msgid "Status"
@@ -156,12 +189,12 @@ msgid ""
 "Limit user access by defining the time duration\n"
 "(how long the user is logged in)"
 msgstr ""
-"Limitieren Sie den Benutzerzugang durch Festlegung\n"
-"der Zeitdauer (wie lange der Benutzer eingeloggt sein darf)"
+"Begrenzen Sie den Benutzerzugang durch Festlegung\n"
+"der Nutzungsdauer (wie lange der Benutzer eingeloggt sein darf)"
 
 #: ../src/gui/main_window.ui:922
 msgid "Limit access duration"
-msgstr "Limitierung der Nutzungsdauer"
+msgstr "Nutzungsdauer begrenzen"
 
 #: ../src/gui/main_window.ui:952 ../src/gui/main_window.ui:1448
 msgid "Sat"
@@ -206,7 +239,7 @@ msgstr ""
 
 #: ../src/gui/main_window.ui:1264
 msgid "Limit time frame"
-msgstr "Zeitrahmen einschränken"
+msgstr "Anmeldezeitpunkt begrenzen"
 
 #: ../src/gui/main_window.ui:1326
 msgid "from"
@@ -302,7 +335,7 @@ msgstr "So"
 #: ../src/timekpr-gui.py:592
 #, python-format
 msgid "Applied limit changes for account %s"
-msgstr "Limitänderungen angewandt für Konto %s"
+msgstr "Änderungen an Begrenzungen angewandt für Konto %s"
 
 #: ../src/timekpr-client.py:196 ../src/timekpr-client.py:225
 msgid "Time left..."
@@ -314,7 +347,7 @@ msgstr "Eigenschaften"
 
 #: ../src/timekpr-client.py:205
 msgid "About"
-msgstr "Etwa"
+msgstr "Info"
 
 #: ../src/timekpr-client.py:268
 msgid "Timekpr Client Control Panel"
@@ -322,15 +355,15 @@ msgstr "Timekpr Client-Kontrollfeld"
 
 #: ../src/timekpr-client.py:430
 msgid "You are early, you will be logged out in LESS than 2 minutes"
-msgstr "Du bist zu früh, du wirst in WENIGER als 2 Minuten ausgeloggt"
+msgstr "Du bist zu früh, du wirst in WENIGER als 2 Minuten abgemeldet"
 
 #: ../src/timekpr-client.py:434
 msgid "You are late, you will be logged out in LESS than 2 minutes"
-msgstr "Du bist zu spät, du wirst in WENIGER als 2 Minuten ausgeloggt"
+msgstr "Du bist zu spät, du wirst in WENIGER als 2 Minuten abgemeldet"
 
 #: ../src/timekpr-client.py:438
 msgid "Your time is up, you will be logged out in LESS than 2 minutes"
-msgstr "Deine Zeit ist um, du wirst in WENIGER als 2 Minuten ausgeloggt"
+msgstr "Deine Zeit ist um, du wirst in WENIGER als 2 Minuten abgemeldet"
 
 #: ../src/timekpr-client.py:460
 msgid "Your time is not limited today"

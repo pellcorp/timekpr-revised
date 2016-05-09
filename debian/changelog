@@ -1,3 +1,9 @@
+timekpr-beta (0.3.6~ppa1~ubuntu10) UNRELEASED; urgency=medium
+
+  * Fix race condition with notifications and DBUS
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 9 May 2016 19:03:18 +0300
+
 timekpr-beta (0.3.6~ppa1~ubuntu9) UNRELEASED; urgency=medium
 
   * Release bump

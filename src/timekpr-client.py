@@ -436,7 +436,7 @@ class IndicatorTimekpr(object):
         # done
         return True
 
-    # initialize anything related to notifications and send first notification
+    # initialize anything related to notifications and send first notification (called from glib timer)
     def initNotificatioDelivery(self):
         # changeable global variables
         global USE_DBUS
@@ -455,6 +455,9 @@ class IndicatorTimekpr(object):
         # add call very shortly
         self.timerLevelInEffect = 1
         self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
+
+        # limit this to one call (called from timer, has to return False not to repeat the message)
+        return False
 
     # periodic notifier, gives notifications to the user
     def regularNotifier(self):
@@ -490,7 +493,7 @@ class IndicatorTimekpr(object):
 
             # if the time is up, notifications is taken care of by reReadConfigAndcheckLimits
             if left < 0:
-                # handled in read congig
+                # handled in read config
                 self.timerLevelInEffect = 0
                 result = False
 

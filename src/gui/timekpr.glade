@@ -1538,7 +1538,7 @@ when user is allowed to login</property>
 Copyright (c) 2008 Savvas Radevic
 Copyright (c) 2014 Eduards Bezverhijs</property>
 	<property name="comments" translatable="yes">Keep control of computer usage</property>
-	<property name="website">http://launchpad.net/timekpr</property>
+	<property name="website">http://launchpad.net/timekpr-revived</property>
 	<property name="website_label">http://launchpad.net/timekpr-revived</property>
 	<property name="license">This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 

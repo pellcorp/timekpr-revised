@@ -6,19 +6,20 @@ msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-04 20:23+0300\n"
-"PO-Revision-Date: 2016-05-04 20:34+0300\n"
+"PO-Revision-Date: 2017-07-19 20:55+0300\n"
 "Last-Translator: \n"
 "Language-Team: Valentin Korenjak\n"
-"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Launchpad-Export-Date: 2017-07-19 13:20+0000\n"
 "X-Generator: Poedit 1.5.4\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: .\n"
+"Language: sl\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 
 #: ../src/gui/about_dialog.ui:9
 msgid "About timekpr"
@@ -67,7 +68,11 @@ msgstr ""
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
 #: ../src/timekpr-client.py:307
 msgid "translator-credits"
-msgstr "Valentin Korenjak"
+msgstr ""
+"Valentin Korenjak\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Eduards Bezverhijs https://launchpad.net/~mjasnik"
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
 msgid "timekpr"
@@ -297,10 +302,10 @@ msgstr "Nastavitve za račun %s so osvežene"
 #, python-format
 msgid "%(min)s minute"
 msgid_plural "%(min)s minutes"
-msgstr[0] "%(min)s minut"
-msgstr[1] "%(min)s minuta"
-msgstr[2] "%(min)s minuti"
-msgstr[3] "%(min)s minute"
+msgstr[0] "%(min)s minute"
+msgstr[1] "%(min)s minut"
+msgstr[2] "%(min)s minuta"
+msgstr[3] "%(min)s minuti"
 
 #: ../src/timekpr-gui.py:445
 msgid "Unlock account"
@@ -361,38 +366,26 @@ msgstr "Imaš še"
 #, python-format
 msgid "%(hour)s hour"
 msgid_plural "%(hour)s hours"
-msgstr[0] "%(hour)s ur"
-msgstr[1] "%(hour)s ura"
-msgstr[2] "%(hour)s uri"
-msgstr[3] "%(hour)s ure"
+msgstr[0] "%(hour)s ure"
+msgstr[1] "%(hour)s ur"
+msgstr[2] "%(hour)s ura"
+msgstr[3] "%(hour)s uri"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
 msgid_plural "%(sec)s seconds"
-msgstr[0] "%(sec)s sekund"
-msgstr[1] "%(sec)s sekunda"
-msgstr[2] "%(sec)s sekundi"
-msgstr[3] "%(sec)s sekunde"
+msgstr[0] "%(sec)s sekunde"
+msgstr[1] "%(sec)s sekund"
+msgstr[2] "%(sec)s sekunda"
+msgstr[3] "%(sec)s sekundi"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
-msgstr " "
+msgstr ""
 
 #: ../src/timekpr-client.py:598
 msgid "Timekpr notification"
 msgstr "Timekpr obvestilo"
-
-#~ msgid "\tSun\t "
-#~ msgstr "\tNed\t"
-
-#~ msgid ""
-#~ "Copyright (c) 2008 Even Nedberg\n"
-#~ "Copyright (c) 2008 Savvas Radevic\n"
-#~ "Copyright (c) 2014 Eduards Bezverhijs"
-#~ msgstr ""
-#~ "Copyright (c) 2008 Even Nedberg\n"
-#~ "Copyright (c) 2008 Savvas Radevic\n"
-#~ "Copyright (c) 2014 Eduards Bezverhijs"

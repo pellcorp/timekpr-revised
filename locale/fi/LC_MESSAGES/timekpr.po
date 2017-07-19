@@ -6,19 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 20:22+0300\n"
-"PO-Revision-Date: 2016-05-04 20:33+0300\n"
+"POT-Creation-Date: 2016-05-04 20:23+0300\n"
+"PO-Revision-Date: 2017-07-19 20:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: Petja Touru\n"
-"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2017-07-19 13:20+0000\n"
 "X-Generator: Poedit 1.5.4\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: .\n"
+"Language: fi\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-SearchPath-0: /home/admins/Desktop/timekpr/stable/gui\n"
 
 #: ../src/gui/about_dialog.ui:9
@@ -55,7 +56,12 @@ msgstr ""
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
 #: ../src/timekpr-client.py:307
 msgid "translator-credits"
-msgstr "Petja Touru"
+msgstr ""
+"Petja Touru\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Eduards Bezverhijs https://launchpad.net/~mjasnik\n"
+"  Jiri Grönroos https://launchpad.net/~jiri-gronroos"
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
 msgid "timekpr"
@@ -71,11 +77,11 @@ msgstr "Käyttäjä:"
 
 #: ../src/gui/client.ui:198
 msgid "Show notification at logon?"
-msgstr "Näytä ilmoituksen kirjautumisen?"
+msgstr "Näytetäänkö ilmoitus kirjautumisen yhteydessä?"
 
 #: ../src/gui/client.ui:216
 msgid "Use speech notifications?"
-msgstr "Käytä puheen ilmoitukset?"
+msgstr "Käytetäänkö puheilmoituksia?"
 
 #: ../src/gui/client.ui:238
 msgid "Notifications"
@@ -192,7 +198,7 @@ msgstr "Joka päivä"
 
 #: ../src/gui/main_window.ui:1194 ../src/gui/main_window.ui:1287
 msgid "Configure per day"
-msgstr "Konfiguroi päiväkohtaisesti"
+msgstr "Määritä päiväkohtaisesti"
 
 #: ../src/gui/main_window.ui:1232
 msgid ""
@@ -200,7 +206,7 @@ msgid ""
 "when user is allowed to login"
 msgstr ""
 "Rajoita käyttöä määrittämällä tunnit\n"
-"(koska käyttäjä on sallittu kirjautumaan)"
+"(jolloin käyttäjän on sallittu kirjautua)"
 
 #: ../src/gui/main_window.ui:1264
 msgid "Limit time frame"
@@ -225,17 +231,18 @@ msgstr "Pääkäyttäjän oikeudet vaaditaan timekpr-gui -ohjelman suorittamisee
 #: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:202
 #: ../src/timekpr-client.py:227
 msgid "Timekpr Control Panel"
-msgstr "Timekpr Ohjauspaneeli"
+msgstr "Timekpr-ohjauspaneeli"
 
 #: ../src/timekpr-gui.py:103
 msgid "Timekpr Client"
-msgstr "Timekpr Client"
+msgstr "Timekpr-asiakas"
 
 #: ../src/timekpr-gui.py:166
 msgid ""
 "You need to have at least one normal user available to configure timekpr"
 msgstr ""
-"Vähintään yksi normaali käyttäjä vaaditaan timekpr-ohjelman konfigurointiin"
+"Vähintään yksi tavallinen käyttäjä vaaditaan timekpr-ohjelman määrityksiä "
+"varten"
 
 #: ../src/timekpr-gui.py:193 ../src/timekpr-gui.py:447
 msgid "Lock account"
@@ -311,19 +318,19 @@ msgstr "Ominaisuudet"
 
 #: ../src/timekpr-client.py:205
 msgid "About"
-msgstr "Noin"
+msgstr "Tietoja"
 
 #: ../src/timekpr-client.py:268
 msgid "Timekpr Client Control Panel"
-msgstr "Timekpr Client Ohjauspaneeli"
+msgstr "Timekpr-asiakkaan ohjauspaneeli"
 
 #: ../src/timekpr-client.py:430
 msgid "You are early, you will be logged out in LESS than 2 minutes"
-msgstr "Olet aikaisessa ja sinut kirjataan ulos ALLE kahdessa minuutissa"
+msgstr "Oletpas aikaisin liikkellä! Sinut kirjataan ulos ALLE 2 minuutissa"
 
 #: ../src/timekpr-client.py:434
 msgid "You are late, you will be logged out in LESS than 2 minutes"
-msgstr "Olet myöhässä ja sinut kirjataan ulos ALLE kahdessa minuutissa"
+msgstr "Olet myöhässä! Sinut kirjataan ulos ALLE 2 minuutissa"
 
 #: ../src/timekpr-client.py:438
 msgid "Your time is up, you will be logged out in LESS than 2 minutes"
@@ -352,17 +359,14 @@ msgstr[1] "%(hour)s tuntia"
 #, python-format
 msgid "%(sec)s second"
 msgid_plural "%(sec)s seconds"
-msgstr[0] "%(sec)s sekunnin"
+msgstr[0] "%(sec)s sekunti"
 msgstr[1] "%(sec)s sekuntia"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
-msgstr " "
+msgstr ""
 
 #: ../src/timekpr-client.py:598
 msgid "Timekpr notification"
 msgstr "Timekpr-ilmoitus"
-
-#~ msgid "\tSun\t "
-#~ msgstr "\tSu\t"

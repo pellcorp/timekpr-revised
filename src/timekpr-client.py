@@ -180,7 +180,7 @@ def init_espeak():
 class IndicatorTimekpr(object):
     def __init__(self):
         # get which DE we are running
-        self.isAppIndicator = (os.getenv('XDG_CURRENT_DESKTOP') == "Unity") and USE_INDICATOR
+        self.isAppIndicator = (True if self.getSessionName().find("Unity") > -1 and USE_INDICATOR else False)
 
         # this is for Unity stuff
         if self.isAppIndicator:

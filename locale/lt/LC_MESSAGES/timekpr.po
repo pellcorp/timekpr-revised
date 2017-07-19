@@ -1,32 +1,37 @@
-#, fuzzy
+# Lithuanian translation for timekpr-revived
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the timekpr-revived package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: timekpr-revived\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-04 20:23+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-07-19 20:55+0300\n"
+"Last-Translator: \n"
+"Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2017-07-19 13:20+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
-"Language: \n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: lt\n"
 
 #: ../src/gui/about_dialog.ui:9
 msgid "About timekpr"
-msgstr ""
+msgstr "Apie timekpr"
 
 #: ../src/gui/about_dialog.ui:19 ../src/timekpr-gui.py:187
 #: ../src/timekpr-client.py:308
 msgid "Keep control of computer usage"
-msgstr ""
+msgstr "Valdykite naudojimosi kompiuteriu trukmę"
 
 #: ../src/gui/about_dialog.ui:21
 msgid "http://launchpad.net/timekpr-revived"
-msgstr ""
+msgstr "http://launchpad.net/timekpr-revived"
 
 #: ../src/gui/about_dialog.ui:22
 msgid ""
@@ -44,306 +49,338 @@ msgid ""
 "this program.  If not, see <http://www.gnu.org/licenses/>. In Debian, see "
 "file /usr/share/common-licenses/GPL-3"
 msgstr ""
+"Ši programa yra laisva programinė įranga: jūs galite ją platinti ir/ar "
+"modifikuoti pagal Free Software Foundation paskelbtas GNU Bendrosios "
+"Viešosios Licencijos nuostatas, licencijos versiją 3, arba (jūsų nuožiūra) "
+"bet kurią vėlesnę versiją.\n"
+"\n"
+"Ši programa yra platinama, tikintis, kad ji bus naudinga, tačiau BE JOKIŲ "
+"GARANTIJŲ; netgi be numanomos PARDAVIMO ar TINKAMUMO TAM TIKRAM TIKSLUI "
+"GARANTIJOS.  Išsamesnei informacijai žiūrėkite GNU Bendrąją Viešąją "
+"Licenciją.\n"
+"\n"
+"Kartu su šia programa turėtumėte gauti GNU Bendrosios Viešosios Licencijos "
+"kopiją.  Jei negavote, žiūrėkite <http://www.gnu.org/licenses/>. Debian "
+"naudotojai, gali žiūrėti failą /usr/share/common-licenses/GPL-3"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
 #: ../src/timekpr-client.py:307
 msgid "translator-credits"
 msgstr ""
+"Launchpad Contributions:\n"
+"  Mantas Kriaučiūnas https://launchpad.net/~mantas\n"
+"  Moo https://launchpad.net/~mooo"
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
 msgid "timekpr"
-msgstr ""
+msgstr "timekpr"
 
 #: ../src/gui/client.ui:26 ../src/gui/main_window.ui:148
 msgid "_Help"
-msgstr ""
+msgstr "_Pagalba"
 
 #: ../src/gui/client.ui:114
 msgid "User:"
-msgstr ""
+msgstr "Naudotojas:"
 
 #: ../src/gui/client.ui:198
 msgid "Show notification at logon?"
-msgstr ""
+msgstr "Rodyti pranešimą prisijungus?"
 
 #: ../src/gui/client.ui:216
 msgid "Use speech notifications?"
-msgstr ""
+msgstr "Naudoti žodinius pranešimus?"
 
 #: ../src/gui/client.ui:238
 msgid "Notifications"
-msgstr ""
+msgstr "Pranešimai"
 
 #: ../src/gui/main_window.ui:235
 msgid "Select user"
-msgstr ""
+msgstr "Pasirinkite naudotoją"
 
 #: ../src/gui/main_window.ui:351
 msgid "Bypass for today"
-msgstr ""
+msgstr "Šiandienai apeiti"
 
 #: ../src/gui/main_window.ui:378
 msgid ""
 "Able to login all day today:\n"
 "(Also active bypass)"
 msgstr ""
+"Šiandien gali prisijungti visą dieną:\n"
+"(Taip pat aktyvus apėjimas)"
 
 #: ../src/gui/main_window.ui:444
 msgid "Reset time"
-msgstr ""
+msgstr "Atstatyti laiką"
 
 #: ../src/gui/main_window.ui:497
 msgid ""
 "Add time\n"
 "Reward / Penalty"
 msgstr ""
+"Pridėti laiką\n"
+"Atlygis / Bauda"
 
 #: ../src/gui/main_window.ui:542 ../src/gui/main_window.ui:1182
 msgid "minutes"
-msgstr ""
+msgstr "min."
 
 #: ../src/gui/main_window.ui:638
 msgid "Clear all restrictions"
-msgstr ""
+msgstr "Panaikinti visus apribojimus"
 
 #: ../src/gui/main_window.ui:693
 msgid "Unlock Account"
-msgstr ""
+msgstr "Atrakinti paskyrą"
 
 #: ../src/gui/main_window.ui:763
 msgid "-"
-msgstr ""
+msgstr "-"
 
 #: ../src/gui/main_window.ui:778
 msgid "Status for <span weight=\"bold\">username</span>"
-msgstr ""
+msgstr "<span weight=\"bold\">username</span> būsena"
 
 #: ../src/gui/main_window.ui:796
 msgid "Time left:"
-msgstr ""
+msgstr "Liko laiko:"
 
 #: ../src/gui/main_window.ui:811
 msgid "Account locked:"
-msgstr ""
+msgstr "Paskyra užrakinta:"
 
 #: ../src/gui/main_window.ui:826
 msgid "Limited by time frame (any day):"
-msgstr ""
+msgstr "Ribojamas naudojimosi laikotarpis (bet kurią dieną):"
 
 #: ../src/gui/main_window.ui:841
 msgid "Limited by access duration (any day):"
-msgstr ""
+msgstr "Ribojama naudojimosi trukmė (bet kurią dieną):"
 
 #: ../src/gui/main_window.ui:856
 msgid "Status"
-msgstr ""
+msgstr "Būklė"
 
 #: ../src/gui/main_window.ui:890
 msgid ""
 "Limit user access by defining the time duration\n"
 "(how long the user is logged in)"
 msgstr ""
+"Riboti naudojimosi kompiuteriu trukmę\n"
+"(kiek laiko naudotojas gali būti prisijungęs)"
 
 #: ../src/gui/main_window.ui:922
 msgid "Limit access duration"
-msgstr ""
+msgstr "Riboti naudojimosi trukmę"
 
 #: ../src/gui/main_window.ui:952 ../src/gui/main_window.ui:1448
 msgid "Sat"
-msgstr ""
+msgstr "Šeš"
 
 #: ../src/gui/main_window.ui:985 ../src/gui/main_window.ui:1433
 msgid "Fri"
-msgstr ""
+msgstr "Pen"
 
 #: ../src/gui/main_window.ui:1018 ../src/gui/main_window.ui:1418
 msgid "Thu"
-msgstr ""
+msgstr "Ket"
 
 #: ../src/gui/main_window.ui:1051 ../src/gui/main_window.ui:1403
 msgid "Wed"
-msgstr ""
+msgstr "Tre"
 
 #: ../src/gui/main_window.ui:1084 ../src/gui/main_window.ui:1388
 msgid "Tue"
-msgstr ""
+msgstr "Ant"
 
 #: ../src/gui/main_window.ui:1117 ../src/gui/main_window.ui:1373
 msgid "Mon"
-msgstr ""
+msgstr "Pir"
 
 #: ../src/gui/main_window.ui:1150 ../src/gui/main_window.ui:1358
 #: ../src/timekpr-gui.py:520 ../src/timekpr-gui.py:545
 msgid "Every day"
-msgstr ""
+msgstr "Kasdien"
 
 #: ../src/gui/main_window.ui:1194 ../src/gui/main_window.ui:1287
 msgid "Configure per day"
-msgstr ""
+msgstr "Konfigūruoti padieniui"
 
 #: ../src/gui/main_window.ui:1232
 msgid ""
 "Limit user access by defining the hours\n"
 "when user is allowed to login"
 msgstr ""
+"Riboti naudojimąsi kompiuteriu nustatant valandas,\n"
+"kada naudotojas gali prisijungti"
 
 #: ../src/gui/main_window.ui:1264
 msgid "Limit time frame"
-msgstr ""
+msgstr "Riboti naudojimosi laikotarpį"
 
 #: ../src/gui/main_window.ui:1326
 msgid "from"
-msgstr ""
+msgstr "nuo"
 
 #: ../src/gui/main_window.ui:1342
 msgid "to"
-msgstr ""
+msgstr "iki"
 
 #: ../src/gui/main_window.ui:1734
 msgid "Limits & Boundaries"
-msgstr ""
+msgstr "Darbo laiko apribojimai"
 
 #: ../src/timekpr-gui.py:51
 msgid "You need to have administrative privileges to run timekpr-gui"
-msgstr ""
+msgstr "Norint paleisti timekpr-gui reikia turėti administratoriaus teises"
 
 #: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:202
 #: ../src/timekpr-client.py:227
 msgid "Timekpr Control Panel"
-msgstr ""
+msgstr "Timekpr valdymo įrankis"
 
 #: ../src/timekpr-gui.py:103
 msgid "Timekpr Client"
-msgstr ""
+msgstr "Timekpr kliento programa"
 
 #: ../src/timekpr-gui.py:166
 msgid ""
 "You need to have at least one normal user available to configure timekpr"
-msgstr ""
+msgstr "Norint konfigūruoti timekpr, turi būti bent vienas įprastas naudotojas"
 
 #: ../src/timekpr-gui.py:193 ../src/timekpr-gui.py:447
 msgid "Lock account"
-msgstr ""
+msgstr "Užrakinti paskyrą"
 
 #: ../src/timekpr-gui.py:196
 #, python-format
 msgid "Locked account %s"
-msgstr ""
+msgstr "%s paskyra užrakinta"
 
 #: ../src/timekpr-gui.py:209
 #, python-format
 msgid "Unlocked account %s"
-msgstr ""
+msgstr "%s paskyra atrakinta"
 
 #: ../src/timekpr-gui.py:233
 #, python-format
 msgid "Removed all restrictions for account %s"
-msgstr ""
+msgstr "Visi apribojimai paskyrai %s yra panaikinti"
 
 #: ../src/timekpr-gui.py:241
 #, python-format
 msgid "Cleared used up time for account %s"
-msgstr ""
+msgstr "Išvalytas išnaudotas laikas paskyrai %s"
 
 #: ../src/timekpr-gui.py:258
 #, python-format
 msgid "Applied reward of %(num)s minute(s) to account %(user)s"
-msgstr ""
+msgstr "Paskyrai %(user)s yra pritaikytas %(num)s minučių atlygis"
 
 #: ../src/timekpr-gui.py:275
 #, python-format
 msgid "Set access hours to 00-24 on %(day)s for account %(user)s"
 msgstr ""
+"Nustatyti paskyrai %(user)s naudojimosi kompiuteriu valandas %(day)s į 00-24"
 
 #: ../src/timekpr-gui.py:280
 #, python-format
 msgid "Refreshed setting values from account %s"
-msgstr ""
+msgstr "Iš naujo įkeltos paskyros %s nustatymų reikšmės"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
 msgid_plural "%(min)s minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(min)s minutė"
+msgstr[1] "%(min)s minutės"
+msgstr[2] "%(min)s minučių"
 
 #: ../src/timekpr-gui.py:445
 msgid "Unlock account"
-msgstr ""
+msgstr "Atrakinti paskyrą"
 
 #: ../src/timekpr-gui.py:482
 msgid "Status for"
-msgstr ""
+msgstr "Būsena"
 
 #: ../src/timekpr-gui.py:514 ../src/timekpr-gui.py:540
 msgid "Sun"
-msgstr ""
+msgstr "Sek"
 
 #: ../src/timekpr-gui.py:592
 #, python-format
 msgid "Applied limit changes for account %s"
-msgstr ""
+msgstr "Apribojimų pakeitimai pritaikyti paskyrai %s"
 
 #: ../src/timekpr-client.py:196 ../src/timekpr-client.py:225
 msgid "Time left..."
-msgstr ""
+msgstr "Liko laiko..."
 
 #: ../src/timekpr-client.py:199
 msgid "Properties"
-msgstr ""
+msgstr "Savybės"
 
 #: ../src/timekpr-client.py:205
 msgid "About"
-msgstr ""
+msgstr "Apie"
 
 #: ../src/timekpr-client.py:268
 msgid "Timekpr Client Control Panel"
-msgstr ""
+msgstr "Timekpr programos valdymo skydelis"
 
 #: ../src/timekpr-client.py:430
 msgid "You are early, you will be logged out in LESS than 2 minutes"
 msgstr ""
+"Dar per anksti naudotis kompiuteriu, jūs būsite atjungti po MAŽIAU nei 2 "
+"minučių"
 
 #: ../src/timekpr-client.py:434
 msgid "You are late, you will be logged out in LESS than 2 minutes"
 msgstr ""
+"Jau per vėlu naudotis kompiuteriu, jūs būsite atjungti po MAŽIAU nei 2 "
+"minučių"
 
 #: ../src/timekpr-client.py:438
 msgid "Your time is up, you will be logged out in LESS than 2 minutes"
-msgstr ""
+msgstr "Jūsų laikas pasibaigė, jūs būsite atjungti po MAŽIAU nei 2 minučių."
 
 #: ../src/timekpr-client.py:460
 msgid "Your time is not limited today"
-msgstr ""
+msgstr "Šiandien jūsų laikas nėra ribojamas"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:544
 msgid "You have"
-msgstr ""
+msgstr "Jums liko"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
 msgid_plural "%(hour)s hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(hour)s valanda"
+msgstr[1] "%(hour)s valandos"
+msgstr[2] "%(hour)s valandų"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
 msgid_plural "%(sec)s seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(sec)s sekundė"
+msgstr[1] "%(sec)s sekundės"
+msgstr[2] "%(sec)s sekundžių"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
-msgstr ""
+msgstr "."
 
 #: ../src/timekpr-client.py:598
 msgid "Timekpr notification"
-msgstr ""
+msgstr "Timekpr pranešimas"

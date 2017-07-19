@@ -28,9 +28,12 @@ icons/padlock-limited-yellow.png usr/share/timekpr/
 icons/padlock-limited-red.png usr/share/timekpr/
 src/launchers/timekpr.desktop usr/share/applications/
 src/launchers/timekpr-client.desktop etc/xdg/autostart
-locale/fr/LC_MESSAGES/timekpr.mo usr/share/locale/fr/LC_MESSAGES/
+locale/de/LC_MESSAGES/timekpr.mo usr/share/locale/de/LC_MESSAGES/
 locale/fi/LC_MESSAGES/timekpr.mo usr/share/locale/fi/LC_MESSAGES/
+locale/fr/LC_MESSAGES/timekpr.mo usr/share/locale/fr/LC_MESSAGES/
+locale/hu/LC_MESSAGES/timekpr.mo usr/share/locale/hu/LC_MESSAGES/
+locale/lt/LC_MESSAGES/timekpr.mo usr/share/locale/lt/LC_MESSAGES/
 locale/lv/LC_MESSAGES/timekpr.mo usr/share/locale/lv/LC_MESSAGES/
 locale/ru/LC_MESSAGES/timekpr.mo usr/share/locale/ru/LC_MESSAGES/
-locale/de/LC_MESSAGES/timekpr.mo usr/share/locale/de/LC_MESSAGES/
 locale/sl/LC_MESSAGES/timekpr.mo usr/share/locale/sl/LC_MESSAGES/
+locale/sv/LC_MESSAGES/timekpr.mo usr/share/locale/sv/LC_MESSAGES/

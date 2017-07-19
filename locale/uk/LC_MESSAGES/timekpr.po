@@ -1,32 +1,37 @@
-#, fuzzy
+# Ukrainian translation for timekpr-revived
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the timekpr-revived package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: timekpr-revived\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-04 20:23+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2017-07-19 20:55+0300\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2017-07-19 13:20+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
-"Language: \n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: uk\n"
 
 #: ../src/gui/about_dialog.ui:9
 msgid "About timekpr"
-msgstr ""
+msgstr "Про timekpr"
 
 #: ../src/gui/about_dialog.ui:19 ../src/timekpr-gui.py:187
 #: ../src/timekpr-client.py:308
 msgid "Keep control of computer usage"
-msgstr ""
+msgstr "Керуйте часом користування комп’ютером"
 
 #: ../src/gui/about_dialog.ui:21
 msgid "http://launchpad.net/timekpr-revived"
-msgstr ""
+msgstr "http://launchpad.net/timekpr-revived"
 
 #: ../src/gui/about_dialog.ui:22
 msgid ""
@@ -44,306 +49,335 @@ msgid ""
 "this program.  If not, see <http://www.gnu.org/licenses/>. In Debian, see "
 "file /usr/share/common-licenses/GPL-3"
 msgstr ""
+"Ця проґрама є вільним проґрамним забезпеченням: Ви можете розповсюджувати "
+"його і/або модифікувати відповідно GNU GPLv3 або (на Ваш розсуд) пізнішої "
+"версії.\n"
+"\n"
+"Ця проґрама розповсюджується зі сподіванням, що вона буде потрібна, але БЕЗ "
+"БУДЬ_ЯКИХ ЗАПОРУК; навіть без запорук КОМЕРЦІЙНОЇ ЦІННОСТИ або ПРАКТИЧНОЇ "
+"КОРИСТИ. Деталі можна подивитися в GNU GPL.\n"
+"\n"
+"Ви повинні були отримати копію GNU GPL з цією проґрамою. Якщо ні, дивіться "
+"<http://www.gnu.org/licenses/>. В Debian, дивіться файл /usr/share/common-"
+"licenses/GPL-3."
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
 #: ../src/timekpr-client.py:307
 msgid "translator-credits"
 msgstr ""
+"Launchpad Contributions:\n"
+"  stuartlittle https://launchpad.net/~stuartlittle1970"
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
 msgid "timekpr"
-msgstr ""
+msgstr "timekpr"
 
 #: ../src/gui/client.ui:26 ../src/gui/main_window.ui:148
 msgid "_Help"
-msgstr ""
+msgstr "_Довідка"
 
 #: ../src/gui/client.ui:114
 msgid "User:"
-msgstr ""
+msgstr "Користувач:"
 
 #: ../src/gui/client.ui:198
 msgid "Show notification at logon?"
-msgstr ""
+msgstr "Показати сповіщення при вході в систему?"
 
 #: ../src/gui/client.ui:216
 msgid "Use speech notifications?"
-msgstr ""
+msgstr "Використовувати сповіщення мови?"
 
 #: ../src/gui/client.ui:238
 msgid "Notifications"
-msgstr ""
+msgstr "Повідомлення"
 
 #: ../src/gui/main_window.ui:235
 msgid "Select user"
-msgstr ""
+msgstr "Вибрати користувача"
 
 #: ../src/gui/main_window.ui:351
 msgid "Bypass for today"
-msgstr ""
+msgstr "Виключення для сьогоднішнього дня"
 
 #: ../src/gui/main_window.ui:378
 msgid ""
 "Able to login all day today:\n"
 "(Also active bypass)"
 msgstr ""
+"Сьогодні можна користуватись протягом усього дня:\n"
+"(Зняти усі обмеження)"
 
 #: ../src/gui/main_window.ui:444
 msgid "Reset time"
-msgstr ""
+msgstr "Скинути час"
 
 #: ../src/gui/main_window.ui:497
 msgid ""
 "Add time\n"
 "Reward / Penalty"
 msgstr ""
+"Додати час\n"
+"Додати / Відняти"
 
 #: ../src/gui/main_window.ui:542 ../src/gui/main_window.ui:1182
 msgid "minutes"
-msgstr ""
+msgstr "хвилин"
 
 #: ../src/gui/main_window.ui:638
 msgid "Clear all restrictions"
-msgstr ""
+msgstr "Скинути усі обмеження"
 
 #: ../src/gui/main_window.ui:693
 msgid "Unlock Account"
-msgstr ""
+msgstr "Розблокувати користувача"
 
 #: ../src/gui/main_window.ui:763
 msgid "-"
-msgstr ""
+msgstr "-"
 
 #: ../src/gui/main_window.ui:778
 msgid "Status for <span weight=\"bold\">username</span>"
-msgstr ""
+msgstr "Статус для користувача <span weight=\"bold\">username</span>"
 
 #: ../src/gui/main_window.ui:796
 msgid "Time left:"
-msgstr ""
+msgstr "Часу залишилось:"
 
 #: ../src/gui/main_window.ui:811
 msgid "Account locked:"
-msgstr ""
+msgstr "Користувач заблокований"
 
 #: ../src/gui/main_window.ui:826
 msgid "Limited by time frame (any day):"
-msgstr ""
+msgstr "Обмежений часовими рамками (будь-який день):"
 
 #: ../src/gui/main_window.ui:841
 msgid "Limited by access duration (any day):"
-msgstr ""
+msgstr "Обмежений тривалістю доступу (будь-який день):"
 
 #: ../src/gui/main_window.ui:856
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 #: ../src/gui/main_window.ui:890
 msgid ""
 "Limit user access by defining the time duration\n"
 "(how long the user is logged in)"
 msgstr ""
+"Обмежити доступ користувачу, вказавши період часу його роботи\n"
+"(який період часу він може працювати після входу в систему)"
 
 #: ../src/gui/main_window.ui:922
 msgid "Limit access duration"
-msgstr ""
+msgstr "Обмеження тривалости доступу"
 
 #: ../src/gui/main_window.ui:952 ../src/gui/main_window.ui:1448
 msgid "Sat"
-msgstr ""
+msgstr "Сб"
 
 #: ../src/gui/main_window.ui:985 ../src/gui/main_window.ui:1433
 msgid "Fri"
-msgstr ""
+msgstr "Пт"
 
 #: ../src/gui/main_window.ui:1018 ../src/gui/main_window.ui:1418
 msgid "Thu"
-msgstr ""
+msgstr "Чт"
 
 #: ../src/gui/main_window.ui:1051 ../src/gui/main_window.ui:1403
 msgid "Wed"
-msgstr ""
+msgstr "Ср"
 
 #: ../src/gui/main_window.ui:1084 ../src/gui/main_window.ui:1388
 msgid "Tue"
-msgstr ""
+msgstr "Вт"
 
 #: ../src/gui/main_window.ui:1117 ../src/gui/main_window.ui:1373
 msgid "Mon"
-msgstr ""
+msgstr "Пн"
 
 #: ../src/gui/main_window.ui:1150 ../src/gui/main_window.ui:1358
 #: ../src/timekpr-gui.py:520 ../src/timekpr-gui.py:545
 msgid "Every day"
-msgstr ""
+msgstr "Щодня"
 
 #: ../src/gui/main_window.ui:1194 ../src/gui/main_window.ui:1287
 msgid "Configure per day"
-msgstr ""
+msgstr "Обмеження по дням"
 
 #: ../src/gui/main_window.ui:1232
 msgid ""
 "Limit user access by defining the hours\n"
 "when user is allowed to login"
 msgstr ""
+"Обмежити доступ користувачу вказавши години,\n"
+"коли йому дозволено заходити в систему"
 
 #: ../src/gui/main_window.ui:1264
 msgid "Limit time frame"
-msgstr ""
+msgstr "Обмежено часовими рамками"
 
 #: ../src/gui/main_window.ui:1326
 msgid "from"
-msgstr ""
+msgstr "з"
 
 #: ../src/gui/main_window.ui:1342
 msgid "to"
-msgstr ""
+msgstr "до"
 
 #: ../src/gui/main_window.ui:1734
 msgid "Limits & Boundaries"
-msgstr ""
+msgstr "Ліміт & Обмеження"
 
 #: ../src/timekpr-gui.py:51
 msgid "You need to have administrative privileges to run timekpr-gui"
-msgstr ""
+msgstr "Для запуску timekpr-gui Ви повинні мати керівничи привілеї"
 
 #: ../src/timekpr-gui.py:102 ../src/timekpr-client.py:202
 #: ../src/timekpr-client.py:227
 msgid "Timekpr Control Panel"
-msgstr ""
+msgstr "Контрольна панель Timekpr"
 
 #: ../src/timekpr-gui.py:103
 msgid "Timekpr Client"
-msgstr ""
+msgstr "Клієнт Timekpr"
 
 #: ../src/timekpr-gui.py:166
 msgid ""
 "You need to have at least one normal user available to configure timekpr"
 msgstr ""
+"В вас повинен бути хоча б один користувач без керівничих привілеїв для "
+"налаштування timekpr"
 
 #: ../src/timekpr-gui.py:193 ../src/timekpr-gui.py:447
 msgid "Lock account"
-msgstr ""
+msgstr "Заблокувати користувача"
 
 #: ../src/timekpr-gui.py:196
 #, python-format
 msgid "Locked account %s"
-msgstr ""
+msgstr "Заблокований користувач %s"
 
 #: ../src/timekpr-gui.py:209
 #, python-format
 msgid "Unlocked account %s"
-msgstr ""
+msgstr "Розблокований користувач %s"
 
 #: ../src/timekpr-gui.py:233
 #, python-format
 msgid "Removed all restrictions for account %s"
-msgstr ""
+msgstr "Вилучені усі заборони для користувача %s"
 
 #: ../src/timekpr-gui.py:241
 #, python-format
 msgid "Cleared used up time for account %s"
-msgstr ""
+msgstr "Обнулено використаний час для користувача %s"
 
 #: ../src/timekpr-gui.py:258
 #, python-format
 msgid "Applied reward of %(num)s minute(s) to account %(user)s"
-msgstr ""
+msgstr "Подовжено на %(num)s хвилин для користувача %(user)s"
 
 #: ../src/timekpr-gui.py:275
 #, python-format
 msgid "Set access hours to 00-24 on %(day)s for account %(user)s"
-msgstr ""
+msgstr "Встановити години доступу 00-24  на %(day)s для користувача %(user)s"
 
 #: ../src/timekpr-gui.py:280
 #, python-format
 msgid "Refreshed setting values from account %s"
-msgstr ""
+msgstr "Оновлено налаштування для користувача %s"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-gui.py:441 ../src/timekpr-client.py:565
 #, python-format
 msgid "%(min)s minute"
 msgid_plural "%(min)s minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(min)s хвилина"
+msgstr[1] "%(min)s хвилини"
+msgstr[2] "%(min)s хвилин"
 
 #: ../src/timekpr-gui.py:445
 msgid "Unlock account"
-msgstr ""
+msgstr "Розблокувати користувача"
 
 #: ../src/timekpr-gui.py:482
 msgid "Status for"
-msgstr ""
+msgstr "Статус для"
 
 #: ../src/timekpr-gui.py:514 ../src/timekpr-gui.py:540
 msgid "Sun"
-msgstr ""
+msgstr "Нд"
 
 #: ../src/timekpr-gui.py:592
 #, python-format
 msgid "Applied limit changes for account %s"
-msgstr ""
+msgstr "Застосовано зміну обмеженнь для користувача %s"
 
 #: ../src/timekpr-client.py:196 ../src/timekpr-client.py:225
 msgid "Time left..."
-msgstr ""
+msgstr "Залишилося часу..."
 
 #: ../src/timekpr-client.py:199
 msgid "Properties"
-msgstr ""
+msgstr "Властивости"
 
 #: ../src/timekpr-client.py:205
 msgid "About"
-msgstr ""
+msgstr "Про"
 
 #: ../src/timekpr-client.py:268
 msgid "Timekpr Client Control Panel"
-msgstr ""
+msgstr "Панель керування Timekpr Client"
 
 #: ../src/timekpr-client.py:430
 msgid "You are early, you will be logged out in LESS than 2 minutes"
 msgstr ""
+"Ви зайшли зарано, Вашу часину роботи буде припинено МЕНШЕ ніж через 2 хвилини"
 
 #: ../src/timekpr-client.py:434
 msgid "You are late, you will be logged out in LESS than 2 minutes"
 msgstr ""
+"Ви починаєте користуватись комп’ютером запізно, Вашу часину роботи буде "
+"закінчено МЕНШЕ ніж через 2 хвилини"
 
 #: ../src/timekpr-client.py:438
 msgid "Your time is up, you will be logged out in LESS than 2 minutes"
-msgstr ""
+msgstr "Ваш час завершився, часина буде завершена МЕНШЕ ніж через 2 хвилини"
 
 #: ../src/timekpr-client.py:460
 msgid "Your time is not limited today"
-msgstr ""
+msgstr "Сьогодні Ваш час без обмежень"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:544
 msgid "You have"
-msgstr ""
+msgstr "Ваш залишок часу"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:549
 #, python-format
 msgid "%(hour)s hour"
 msgid_plural "%(hour)s hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(hour)s година"
+msgstr[1] "%(hour)s години"
+msgstr[2] "%(hour)s годин"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:581
 #, python-format
 msgid "%(sec)s second"
 msgid_plural "%(sec)s seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(sec)s секунда"
+msgstr[1] "%(sec)s секунди"
+msgstr[2] "%(sec)s секунд"
 
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
-msgstr ""
+msgstr "ліворуч"
 
 #: ../src/timekpr-client.py:598
 msgid "Timekpr notification"
-msgstr ""
+msgstr "Повідомлення Timekpr"

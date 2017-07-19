@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: timekpr-revived\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-04 20:23+0300\n"
-"PO-Revision-Date: 2016-05-04 20:34+0300\n"
+"PO-Revision-Date: 2017-07-19 20:55+0300\n"
 "Last-Translator: \n"
 "Language-Team: Swedish <sv@li.org>\n"
-"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-05-04 16:08+0000\n"
+"X-Launchpad-Export-Date: 2017-07-19 13:20+0000\n"
 "X-Generator: Poedit 1.5.4\n"
+"Language: sv\n"
 
 #: ../src/gui/about_dialog.ui:9
 msgid "About timekpr"
@@ -48,6 +48,19 @@ msgid ""
 "this program.  If not, see <http://www.gnu.org/licenses/>. In Debian, see "
 "file /usr/share/common-licenses/GPL-3"
 msgstr ""
+"Detta program är fri mjukvara! Du kan återdistribuera det och/eller "
+"modifiera det, under villkoren för GNU General Public License som den "
+"publiceras av Free Software Foundation. Antingen version 3 av licensen, "
+"eller valfri senare version.\n"
+"\n"
+"Programmet distribueras i hopp om att det skall vara användbart, men UTAN "
+"NÅGRA GARANTIER. Utan ens underförstådd garanti om SÄLJBARHET eller "
+"LÄMPLIGHET FÖR ETT VISST ÄNDAMÅL. Se GNU General Public License för mer "
+"detaljerad info.\n"
+"\n"
+"Du bör ha fått en kopia av GNU General Public License tillsammans med det "
+"här programmet. Om inte, se <http://www.gnu.org/licenses/gpl-3.0.txt>. I "
+"Debian, se /usr/share/common-licenses/GPL-3"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
@@ -55,6 +68,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Eduards Bezverhijs https://launchpad.net/~mjasnik\n"
 "  Åke Engelbrektson https://launchpad.net/~eson"
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
@@ -71,11 +85,11 @@ msgstr "Användare:"
 
 #: ../src/gui/client.ui:198
 msgid "Show notification at logon?"
-msgstr "Visa anmälan vid inloggning?"
+msgstr "Vill du visa avisering vid inloggning?"
 
 #: ../src/gui/client.ui:216
 msgid "Use speech notifications?"
-msgstr "Använd tal meddelanden?"
+msgstr "Vill du använda talmeddelanden?"
 
 #: ../src/gui/client.ui:238
 msgid "Notifications"
@@ -314,7 +328,7 @@ msgstr "Om"
 
 #: ../src/timekpr-client.py:268
 msgid "Timekpr Client Control Panel"
-msgstr "Timekpr klient kontrollpanelen"
+msgstr "Timekpr klientkontrollpanel"
 
 #: ../src/timekpr-client.py:430
 msgid "You are early, you will be logged out in LESS than 2 minutes"
@@ -363,6 +377,3 @@ msgstr "vänster"
 #: ../src/timekpr-client.py:598
 msgid "Timekpr notification"
 msgstr "Timekpr avisering"
-
-#~ msgid "\tSun\t "
-#~ msgstr "\tSön\t "

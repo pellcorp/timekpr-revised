@@ -16,7 +16,7 @@ from time import strftime, localtime
 from timekprpam import *
 
 def getversion():
-    return '0.3.6'
+    return '0.3.7'
 
 def checkifadmin():
     if geteuid() != 0:

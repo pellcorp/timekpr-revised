@@ -1,3 +1,10 @@
+timekpr-beta (0.3.7~ppa1~ubuntu1) UNRELEASED; urgency=medium
+
+  * Imported translations from Launchpad
+  * Fixes 1646472, 1660526
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 9 May 2016 19:03:18 +0300
+
 timekpr-beta (0.3.6~ppa1~ubuntu10) UNRELEASED; urgency=medium
 
   * Fix race condition with notifications and DBUS

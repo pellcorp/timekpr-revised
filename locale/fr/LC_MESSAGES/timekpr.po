@@ -6,19 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Timekpr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 20:22+0300\n"
-"PO-Revision-Date: 2016-05-04 20:33+0300\n"
+"POT-Creation-Date: 2016-05-04 20:23+0300\n"
+"PO-Revision-Date: 2017-07-19 20:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: Jean-Philippe Lord\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2017-07-19 13:20+0000\n"
 "X-Generator: Poedit 1.5.4\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: .\n"
+"Language: fr\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-SearchPath-0: /home/admins/Desktop/timekpr/stable/gui\n"
 
 #: ../src/gui/about_dialog.ui:9
@@ -55,7 +56,11 @@ msgstr ""
 #: ../src/gui/about_dialog.ui:31 ../src/timekpr-gui.py:186
 #: ../src/timekpr-client.py:307
 msgid "translator-credits"
-msgstr "Jean-Philippe Lord"
+msgstr ""
+"Jean-Philippe Lord\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Eduards Bezverhijs https://launchpad.net/~mjasnik"
 
 #: ../src/gui/client.ui:8 ../src/gui/main_window.ui:126
 msgid "timekpr"
@@ -364,11 +369,8 @@ msgstr[1] "%(sec)s secondes"
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
-msgstr " "
+msgstr ""
 
 #: ../src/timekpr-client.py:598
 msgid "Timekpr notification"
 msgstr "Notifications de Timekpr"
-
-#~ msgid "\tSun\t "
-#~ msgstr "\tDim\t"

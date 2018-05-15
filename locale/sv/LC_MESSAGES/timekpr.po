@@ -372,7 +372,7 @@ msgstr[1] "%(sec)s sekunder"
 #. TRANSLATORS: this is a part of message "You have %(hour)s hour(s), %(min)s minute(s) and %(sec)s second(s) left" please translate accordingly
 #: ../src/timekpr-client.py:588
 msgid "left"
-msgstr "vänster"
+msgstr "kvar"
 
 #: ../src/timekpr-client.py:598
 msgid "Timekpr notification"

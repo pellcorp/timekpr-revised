@@ -1,3 +1,18 @@
+timekpr-beta (0.3.7~ppa1~ubuntu3) UNRELEASED; urgency=medium
+
+  * Imported improved translations from launchpad
+    * russian
+    * swedish (fixes #1713350)
+  * Fixed executables for Ubuntu 18.04 (fixes #1769306)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 15 Mai 2018 09:26:17 +0300
+
+timekpr-beta (0.3.7~ppa1~ubuntu2) UNRELEASED; urgency=medium
+
+  * Enabled reworked GUI for Timekpr Control Panel
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 27 Jul 2017 18:11:53 +0300
+
 timekpr-beta (0.3.7~ppa1~ubuntu1) UNRELEASED; urgency=medium
 
   * Imported translations from Launchpad

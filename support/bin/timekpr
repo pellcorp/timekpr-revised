@@ -1,1 +1,2 @@
-#!/usr/bin/python2 /usr/share/pyshared/timekpr/timekpr.py
+#!/bin/bash
+/usr/bin/python2 /usr/share/pyshared/timekpr/timekpr.py

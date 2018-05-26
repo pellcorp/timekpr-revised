@@ -180,7 +180,7 @@ def init_espeak():
 class IndicatorTimekpr(object):
     def __init__(self):
         # get which DE we are running
-        self.isAppIndicator = (True if self.getSessionName().find("Unity") > -1 and USE_INDICATOR else False)
+        self.isAppIndicator = (True if (self.getSessionName().find("Unity") > -1 or (self.getSessionName() == "KDE" and self.getSessionVersion(self.getSessionName()) == 5)) and USE_INDICATOR else False)
 
         # this is for Unity stuff
         if self.isAppIndicator:
@@ -340,6 +340,8 @@ class IndicatorTimekpr(object):
         if USE_DBUS:
             # create a dict for urgencies
             self.dbusUrgencies = {"low":dbus.Byte(0, variant_level=1), "normal":dbus.Byte(1, variant_level=1), "critical":dbus.Byte(2, variant_level=1)}
+            # add dbus interface variable
+            self.notifyInterface = None
 
         # initial check of the limits
         self.reReadConfigAndcheckLimits()
@@ -628,9 +630,13 @@ class IndicatorTimekpr(object):
 
         # if dbus available
         if USE_DBUS:
-            # notify
-            self.notifyInterface.Notify('Timekpr', 0, icon, title, message, '', {"urgency":self.dbusUrgencies[urgency]}, durationMsecs)
-            print "notification via dbus"
+            # onl if dbus is initiated
+            if self.notifyInterface is not None:
+                # notify
+                self.notifyInterface.Notify('Timekpr', 0, icon, title, message, '', {"urgency":self.dbusUrgencies[urgency]}, durationMsecs)
+                print "notification via dbus"
+            else:
+                print "dbus is not yet up, please be patient..."
         # KDE uses different tech to notify users
         elif self.getSessionName() == 'KDE' and self.getSessionVersion(self.getSessionName()) == 3:
             # KDE3 and friends use dcop

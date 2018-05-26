@@ -1,3 +1,11 @@
+timekpr-beta (0.3.7~ppa1~ubuntu6) UNRELEASED; urgency=medium
+
+  * Improve packaging for non-Gnome DEs (now it's possible to use Timekpr in KDE5 just fine)
+  * Trying to improve KDE integration (now it works great, except tooltip icon and text as in Unity)
+  * Fixed race condition with delayed DBus initialization and user clicks
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 26 Mai 2018 09:32:17 +0300
+
 timekpr-beta (0.3.7~ppa1~ubuntu5) UNRELEASED; urgency=medium
 
   * Regenerate translation files

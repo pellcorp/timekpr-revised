@@ -1,3 +1,17 @@
+timekpr-beta (0.3.7~ppa1~ubuntu7) UNRELEASED; urgency=medium
+
+  * Improve notification handling (DBUS lazy init)
+  * New notification limits:
+  *   time left > 2hrs   = notifications every hour
+  *   time left < 2hrs   = notifications every half an hour
+  *   time left < 30mins = notifications every 10 minutes
+  *   time left < 10mins = notifications every 5 minutes
+  *   time left < 3mins = notifications every minute
+  *   notifications are critical starting when time left < 10 minutes (critial means notifications try to stay on top of all they can)
+  * Added debugging options (in case there are problems with client)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Wed, 8 Aug 2018 09:32:47 +0300
+
 timekpr-beta (0.3.7~ppa1~ubuntu6) UNRELEASED; urgency=medium
 
   * Improve packaging for non-Gnome DEs (now it's possible to use Timekpr in KDE5 just fine)

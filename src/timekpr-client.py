@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+# generic import
+import gi
+
 # configparser
 try:
     # python3
@@ -10,13 +13,14 @@ except ImportError:
 
 # indicator stuff
 try:
+    gi.require_version('AppIndicator3', '0.1')
     from gi.repository import AppIndicator3 as AppIndicator
     USE_INDICATOR = True
 except ImportError:
     USE_INDICATOR = False
     pass
 
-# initi speech
+# init speech
 try:
     from espeak import espeak as espeak
     USE_SPEECH = True
@@ -37,6 +41,7 @@ import os
 import sys
 import time
 
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 from gi.repository import GObject
 from gi.repository import GLib
@@ -48,12 +53,26 @@ from gettext import ngettext
 
 import subprocess
 
-#If DEVACTIVE is true, it uses files from local directory
+# debug
+DEBUG = False
+# if DEVACTIVE is true, it uses files from local directory
 DEVACTIVE = False
 
+# check for debug option
+try:
+    for arg in sys.argv:
+        if arg == "debug":
+            DEBUG = True
+        elif arg == "devactive":
+            DEVACTIVE = True
+except Exception:
+    pass
+
+# local files
 if DEVACTIVE:
     from sys import path
     path.append('.')
+    print("%s: development config" % ("main"))
 
 from common.timekprpam import *
 from common.timekprcommon import *
@@ -76,6 +95,13 @@ UI_POPUPMENU = """
 </ui>
 """
 
+def debug(text, force=False):
+    prefix="LOG"
+    if DEBUG:
+        prefix="DBG%s" % (prefix)
+    if DEBUG or force:
+        print('%s: %s' % (prefix, text))
+
 #translation stuff
 def init_locale():
     locale_domain = "timekpr" # must match locale domain set in *.ui files
@@ -96,11 +122,12 @@ def get_language():
     return lang
 
 def config_filename(DEVACTIVE):
+    cfg_filename = ""
     if DEVACTIVE:
-        return './timekpr-client.conf'
+        cfg_filename = "../support"
 
     cfg_path = os.getenv("XDG_CONFIG_HOME", default=os.path.join(os.path.expanduser("~"), ".config", "timekpr"))
-    cfg_filename = os.path.join(cfg_path, 'timekpr-client.conf')
+    cfg_filename = cfg_filename + os.path.join(cfg_path, 'timekpr-client.conf')
     return cfg_filename
 
 def load_config(DEVACTIVE):
@@ -110,7 +137,7 @@ def load_config(DEVACTIVE):
     try:
         conf.read(fconf)
     except configparser.ParsingError:
-        print('Error: Could not parse the configuration file properly %s' % fconf)
+        debug('Error: Could not parse the configuration file properly %s' % fconf, True)
 
     #Creating a dictionary file
     var = dict()
@@ -298,14 +325,18 @@ class IndicatorTimekpr(object):
 
     def initTimekpr(self):
         # get variables and set interval
-        self.VAR = getvariables(False)
+        self.VAR = getvariables(DEVACTIVE)
         self.checkInterval = 30
         self.timerLevelInEffect = 1
 
-        self.notifyIntervalLevel1 = 10*60
-        self.notifyIntervalLevel2 = 5*60
-        self.notifyIntervalLevel3 = 2*60
-        self.notifyIntervalLevel4 = 1*60
+        # get username
+        self.username = os.getenv('USER')
+
+        # replace stuff for DEV
+        if DEVACTIVE:
+            self.VAR['TIMEKPRSHARED'] = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'icons/'))
+            self.VAR['TIMEKPRWORK'] = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'sample/'))
+            self.VAR['TIMEKPRDIR'] = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'sample/'))
 
         # get both locked and unlocked icons
         self.limited_green = os.path.join(self.VAR['TIMEKPRSHARED'], 'padlock-limited-green.png')
@@ -313,8 +344,6 @@ class IndicatorTimekpr(object):
         self.limited_red = os.path.join(self.VAR['TIMEKPRSHARED'], 'padlock-limited-red.png')
         self.unlimited_green = os.path.join(self.VAR['TIMEKPRSHARED'], 'padlock-unlimited-green.png')
 
-        # get username
-        self.username = os.getenv('USER')
         # get language
         self.lang = get_language()
 
@@ -323,25 +352,43 @@ class IndicatorTimekpr(object):
         self.allowfile = os.path.join(self.VAR['TIMEKPRWORK'], self.username + '.allow')
         self.conffile = os.path.join(self.VAR['TIMEKPRDIR'], self.username)
 
+        # create stuff for DEV
+        if DEVACTIVE:
+            debug("creating sample dir")
+            dir = os.path.dirname(self.VAR['TIMEKPRWORK']+"/")
+            if not os.path.exists(dir):
+                debug("creating sample files")
+                os.makedirs(dir)
+                f=open(self.timefile, "a")
+                f.write("84540")
+                f.close()
+                f=open(self.allowfile, "a")
+                f.close()
+                f=open(self.conffile + ".late", "a")
+                f.close()
+
         # nobody wanted info by clicking on the icon and other default stuff
         self.click = False
         self.firstNotif = True
         self.notifTimer = None
-        self.timeSpentPrev = self.getTime(self.timefile)
+        self.notifyInterface = None
+        self.timeSpentPrev, verified = self.getTime(self.timefile)
         self.notificationLimits = (
-            [0*60,1*60,'critical',self.limited_red,0]
-            ,[3*60,1*60,'critical',self.limited_red,1] # less than 3 mins - notification goes off every minute, urgency is critical, icon is red
-            ,[10*60,2*60,'normal',self.limited_yellow,2]
-            ,[25*60,5*60,'low',self.limited_green,3]
-            ,[9999999,10*60,'low',self.limited_green,4]
+            [0*60,1*60,'critical',self.limited_red,0] # very critial, once a minute, urgency is critical (on top of everyting), icon is red
+            ,[3*60,1*60,'critical',self.limited_red,1] # less than 3 mins - notification goes off every minute, urgency is critical (on top of everyting), icon is red
+            ,[10*60,5*60,'critical',self.limited_yellow,2] # normal, but yellow as warning, not much time left at all, urgency is critical (on top of everyting), icon is still yellow
+            ,[30*60,10*60,'normal',self.limited_yellow,3] # normal, but yellow as warning, not much time left
+            ,[2*60*60,30*60,'low',self.limited_green,4] # plenty of time
+            ,[9999999,60*60,'low',self.limited_green,5] # even more plenty of time
         )
 
         # this is needed only if DBUS is used
         if USE_DBUS:
             # create a dict for urgencies
             self.dbusUrgencies = {"low":dbus.Byte(0, variant_level=1), "normal":dbus.Byte(1, variant_level=1), "critical":dbus.Byte(2, variant_level=1)}
-            # add dbus interface variable
-            self.notifyInterface = None
+            # init DBUS early
+            self.initNotificatioDelivery(True)
+            # first time it may fail, we need to init it the lazy way later
 
         # initial check of the limits
         self.reReadConfigAndcheckLimits()
@@ -352,10 +399,11 @@ class IndicatorTimekpr(object):
         # add a GLib loop to check limits:
         GLib.timeout_add_seconds(self.checkInterval, self.reReadConfigAndcheckLimits)
 
-        # add a notifier for the first time to one second
-        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect+8, self.initNotificatioDelivery)
+        # add a notifier for the first time to x seconds (only if not already initialized)
+        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect+9, self.initNotificatioDelivery)
 
     def reReadConfigAndcheckLimits(self):
+        name = "reReadConfigAndcheckLimits"
         # defaults
         urgency = 'low'
 
@@ -385,33 +433,38 @@ class IndicatorTimekpr(object):
                 self.tray.set_from_file(self.limited_red)
 
         # get the time already spent
-        time = self.getTime(self.timefile)
+        time, verified = self.getTime(self.timefile)
 
         # check if we have file, if not - exit
-        if time == -0.1:
+        if verified != True:
+            self.notifyUser(_('Can not read configuration, time left is unknown'), 'critical')
             return True
 
+        debug("%s: previous time: %d, new time: %d, check interval: %d" % (name, time, self.timeSpentPrev, 3*self.checkInterval-1))
+
         # check if time changed too rapildly, we have to resched the notifier
-        if abs(time - self.timeSpentPrev) > 2*self.checkInterval-1:
+        if abs(time - self.timeSpentPrev) > (3*self.checkInterval-1):
             # end the current callback
             GLib.source_remove(self.notifTimer)
 
             # add call very shortly
             self.timerLevelInEffect = 1
             self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
+            debug("%s: time changed rapidly, emit notification" % (name))
 
         # store previous reading
         self.timeSpentPrev = time
 
         # get the time left
         left = self.getTimeLeft()
+        debug("%s: time left %d" % (name, left))
 
         # normalize time for display
         if left <= 0:
             left = 0
             urgency = 'critical'
         # in case more time added while very low on minutes
-        elif self.timerLevelInEffect == 0 and left > 0:
+        elif self.timerLevelInEffect <= 0 and left > 0:
             self.regularNotifier()
 
         # split hours, minutes, seconds
@@ -419,9 +472,9 @@ class IndicatorTimekpr(object):
 
         # indicators only
         if self.isAppIndicator:
-            self.ind.set_label("("+str(h).rjust(2, "0")+":"+str(m).rjust(2, "0")+")", "")
+            self.ind.set_label("(%s:%s)" % (str(h).rjust(2, "0"), str(m).rjust(2, "0")), "")
         else:
-            self.tray.set_tooltip_text("("+str(h).rjust(2, "0")+":"+str(m).rjust(2, "0")+")")
+            self.tray.set_tooltip_text("(%s:%s)" % (str(h).rjust(2, "0"), str(m).rjust(2, "0")))
 
         # now if it arrives too early
         if isearly(self.bfrom, self.allowfile):
@@ -439,24 +492,28 @@ class IndicatorTimekpr(object):
         return True
 
     # initialize anything related to notifications and send first notification (called from glib timer)
-    def initNotificatioDelivery(self):
+    def initNotificatioDelivery(self, firstInit=False):
         # changeable global variables
         global USE_DBUS
 
         # trying to get on the bus
-        if USE_DBUS:
+        if USE_DBUS and self.notifyInterface is None:
             try:
                 # dbus connection
                 self.sessionDbus = dbus.SessionBus()
                 self.notifyObject = self.sessionDbus.get_object('org.freedesktop.Notifications', '/org/freedesktop/Notifications')
                 self.notifyInterface = dbus.Interface(self.notifyObject, 'org.freedesktop.Notifications')
             except:
-                USE_DBUS = False
+                if firstInit != True:
+                    USE_DBUS = False
+                else:
+                    debug("%s: DBUS init failed for the first time, trying second time..." % ("initNotificatioDelivery"))
                 pass
 
         # add call very shortly
-        self.timerLevelInEffect = 1
-        self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
+        if firstInit != True:
+            self.timerLevelInEffect = 1
+            self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
 
         # limit this to one call (called from timer, has to return False not to repeat the message)
         return False
@@ -464,6 +521,7 @@ class IndicatorTimekpr(object):
     # periodic notifier, gives notifications to the user
     def regularNotifier(self):
         # default values
+        name = "regularNotifier"
         result = True
         timerLevelInEffectTmp = self.timerLevelInEffect
         urgency = 'low'
@@ -481,9 +539,12 @@ class IndicatorTimekpr(object):
                 self.timerLevelInEffect = 0
             result = False
         # if there is time to check
-        # -0.1 means timefile does not exist
-        elif self.getTime(self.timefile) == -0.1:
-            return result
+        else:
+            time, verified = self.getTime(self.timefile)
+            if verified != True:
+                result = False
+                debug("%s: file (%s) can NOT be read, we have a problem..." % (name, self.timefile))
+                return result
 
         # first notification is no more
         self.firstNotif = False
@@ -492,6 +553,8 @@ class IndicatorTimekpr(object):
         if result != False:
             # get how much time is left
             left = self.getTimeLeft()
+
+            debug("%s: time left: %d" % (name, left))
 
             # if the time is up, notifications is taken care of by reReadConfigAndcheckLimits
             if left < 0:
@@ -509,8 +572,12 @@ class IndicatorTimekpr(object):
 
                 # check limits and do actions based on results
                 for rLimit in self.notificationLimits:
-                    # if time left is more than 25 minutes, notify every 10 minutes
+                    debug("%s: checking limit: %d" % (name, rLimit[0]))
+
+                    # check time left according to defined limits
                     if left < rLimit[0] + self.checkInterval + 5:
+                        debug("%s: found the right limit: %d" % (name, rLimit[0]))
+
                         # set urgency
                         urgency = rLimit[2]
 
@@ -518,6 +585,7 @@ class IndicatorTimekpr(object):
                         if not self.click:
                             # new timer
                             self.timerLevelInEffect = rLimit[1]
+                            debug("%s: check if limit has changed, old: %d, new: %d" % (name, timerLevelInEffectTmp, self.timerLevelInEffect))
 
                             # if limit has changed
                             if timerLevelInEffectTmp != self.timerLevelInEffect:
@@ -530,11 +598,14 @@ class IndicatorTimekpr(object):
                                 # change tmp for adjustments
                                 timerLevelInEffectTmp = self.timerLevelInEffect
 
+                                debug("%s: limit compensation, left: %d, prev: %d, check: %d" % (name, left, self.notificationLimits[rLimit[4]-1][0], self.timerLevelInEffect))
+
                                 # calculate new interval: say if we have 26 mins notification will be scheduled at 16 mins, but the rule
                                 # is that if we have less than 25 mins, notification goes off every 5 mins, so that has to be at 25, 20, ... mins
                                 # to compensate that we need to schedule time to go off at 25 not 16
                                 if left - self.notificationLimits[rLimit[4]-1][0] < self.timerLevelInEffect:
                                     timerLevelInEffectTmp = left - self.notificationLimits[rLimit[4]-1][0]
+                                    debug("%s: adjusted limit: %d" % (name, timerLevelInEffectTmp))
 
                                 # set up new interval
                                 self.notifTimer = GLib.timeout_add_seconds(timerLevelInEffectTmp, self.regularNotifier)
@@ -612,6 +683,7 @@ class IndicatorTimekpr(object):
         return message
 
     def notifyUser(self, message, urgency):
+        name = "notifyUser"
         # defaults
         icon = 'gtk-dialog-info'
         durationSecs = 3
@@ -634,29 +706,34 @@ class IndicatorTimekpr(object):
             if self.notifyInterface is not None:
                 # notify
                 self.notifyInterface.Notify('Timekpr', 0, icon, title, message, '', {"urgency":self.dbusUrgencies[urgency]}, durationMsecs)
-                print "notification via dbus"
+                debug("%s: notification via dbus" % (name))
             else:
-                print "dbus is not yet up, please be patient..."
+                debug("%s: notification via dbus, BUT DBUS is NOT initalized" % (name), True)
         # KDE uses different tech to notify users
         elif self.getSessionName() == 'KDE' and self.getSessionVersion(self.getSessionName()) == 3:
             # KDE3 and friends use dcop
             getcmdoutput('dcop knotify default notify notifying timekpr-client "' + message + '" "" "" 16 0')
-            print "notification via dcop"
+            debug("%s: notification via dcop" % (name))
         # failover
         else:
             # for the rest try standard notification
             getcmdoutput('notify-send --icon=' + icon + ' --urgency=' + urgency + ' -t ' + str(durationMsecs) + ' "' + title + '" "' + message + '"')
-            print "notification via notify-send"
+            debug("%s: notification via notify-send" % (name))
 
         # if speech is enabled, let's make some noise
         if VAR['USE_SPEECH_NOTIFICATION'] and USE_SPEECH:
             espeak.synth(message)
+            debug("%s: speach" % (name))
 
-    # returns the number of seconds a user has spent, -0.1 if user.time does not exist
+    # returns the number of seconds a user has spent
     def getTime(self, tfile):
+        name = "getTime"
+        debug("%s: config file (%s) read" % (name, tfile))
+
         # check for file
         if not isfile(tfile):
-            return -0.1
+            debug("%s: config file (%s) NOT found!" % (name, tfile), True)
+            return 0, False
 
         # get seconds spent
         t = open(tfile)
@@ -664,14 +741,15 @@ class IndicatorTimekpr(object):
         t.close()
 
         # pass back time
-        return time
+        return time, True
 
     def getTimeLeft(self):
+        name = "getTimeLeft"
         # get day
         index = int(strftime("%w"))
 
         # calculates how much time if left
-        usedtime = self.getTime(self.timefile)
+        usedtime, verified = self.getTime(self.timefile)
         timeleft = self.limits[index] - usedtime
         timeuntil = self.timeofbto(index) - datetime.datetime.now()
         tuntil = timeuntil.seconds
@@ -681,6 +759,8 @@ class IndicatorTimekpr(object):
             left = timeleft
         else:
             left = tuntil
+
+        debug("%s: used: %d, left: %d, until: %d, left: %d" % (name, usedtime, timeleft, tuntil, left))
 
         # return what's left :)
         return left
@@ -717,6 +797,7 @@ class IndicatorTimekpr(object):
 
     # this gets session information
     def getSessionName(self):
+        debug("session name: %s" % (os.getenv('XDG_CURRENT_DESKTOP')))
         return os.getenv('XDG_CURRENT_DESKTOP')
 
     # get KDE version
@@ -735,6 +816,7 @@ class IndicatorTimekpr(object):
             else:
                 version = int(versionTmp)
 
+        debug("session version: %d" % (version))
         # final version
         return version
 

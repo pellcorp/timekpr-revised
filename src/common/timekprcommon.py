@@ -26,7 +26,8 @@ def getvariables(DEVACTIVE):
     #Read timekpr.conf
     fconf = '/etc/timekpr.conf'
     if DEVACTIVE:
-        fconf = './etc/timekpr.conf'
+        fconf = '../support/etc/timekpr.conf'
+
     if not isfile(fconf):
         exit('Error: Could not find configuration file %s' % fconf)
 
@@ -88,6 +89,7 @@ def getvariables(DEVACTIVE):
         var['TIMEKPRSHARED'] = conf.get("directories", "timekprshared")
     except configparser.NoOptionError:
         var['TIMEKPRSHARED'] = '/usr/share/timekpr'
+
     if DEVACTIVE:
         var['TIMEKPRSHARED'] = './gui'
 

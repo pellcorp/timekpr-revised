@@ -20,7 +20,7 @@ def getconfsection(conffile):
     """
     s = open(conffile).read()
     check = re.compile('## TIMEKPR START|## TIMEKPR END').findall(s)
-    
+
     # If the timekpr section lines '## TIMEKPR START' or '## TIMEKPR END' are not
     # found, exit with an error.
     if not len(check):
@@ -124,7 +124,7 @@ def converttimeline(hfrom, hto):
     #return Al0700-2400
     if mfrom and mto:
         return 'Al' + hourize(mfrom.group(1)) + '-' + hourize(mto.group(1))
-    
+
     #or if all days separate
     su = 'Su' + hourize(hfrom[0]) + '-' + hourize(hto[0])
     mo = 'Mo' + hourize(hfrom[1]) + '-' + hourize(hto[1])
@@ -264,7 +264,7 @@ def strint(x):
 def converttconf(tfrom, tto, mode=0):
     """Removes the unnecessary 0 and multiplies from and to lists if necessary
 
-    If mode = 0 (default), it converts tfrom = ['08','08','13','14','15','01','09'], 
+    If mode = 0 (default), it converts tfrom = ['08','08','13','14','15','01','09'],
     tto = ['22','14','19','20','21','23','25'] into ['8','8','13','14','15','1','9']
     and ['22','14','19','20','21','23','25'] respectively
     If mode = 1, it converts tfrom = '08', tto = '22' into ['8','8','8','8','8','8','8']
@@ -333,11 +333,11 @@ def parseutlist(utlist):
                                 [su[1], mo[1],tu[1],we[1],th[1],fr[1],sa[1]])
         retlist.append([u, final])
         # Internal example - retlist.append appends like so:
-        # user: [niania,(['0', '0', '0', '0', '0', '0', '0'], 
+        # user: [niania,(['0', '0', '0', '0', '0', '0', '0'],
         #       ['24', '24', '24', '24', '24', '24', '24'])]
-        # user: [wawa,(['7', '7', '7', '7', '7', '7', '9'], 
+        # user: [wawa,(['7', '7', '7', '7', '7', '7', '9'],
         #        ['22', '22', '22', '22', '22', '22', '22'])]
-    
+
     return retlist
 
 def getuserlimits(u):

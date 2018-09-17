@@ -16,7 +16,7 @@ try:
     gi.require_version('AppIndicator3', '0.1')
     from gi.repository import AppIndicator3 as AppIndicator
     USE_INDICATOR = True
-except ImportError:
+except (ImportError, ValueError):
     USE_INDICATOR = False
     pass
 
@@ -24,7 +24,7 @@ except ImportError:
 try:
     from espeak import espeak as espeak
     USE_SPEECH = True
-except ImportError:
+except (ImportError, ValueError):
     USE_SPEECH = False
     pass
 
@@ -32,7 +32,7 @@ except ImportError:
 try:
     import dbus
     USE_DBUS = True
-except ImportError:
+except  (ImportError, ValueError):
     USE_DBUS = False
     pass
 
@@ -419,6 +419,7 @@ class IndicatorTimekpr(object):
             if self.isAppIndicator:
                 self.ind.set_icon(self.unlimited_green)
                 self.ind.set_label("", "")
+                self.ind.set_title("")
             else:
                 self.tray.set_from_file(self.unlimited_green)
                 self.tray.set_tooltip_text("")
@@ -473,6 +474,7 @@ class IndicatorTimekpr(object):
         # indicators only
         if self.isAppIndicator:
             self.ind.set_label("(%s:%s)" % (str(h).rjust(2, "0"), str(m).rjust(2, "0")), "")
+            self.ind.set_title("(%s:%s)" % (str(h).rjust(2, "0"), str(m).rjust(2, "0")))
         else:
             self.tray.set_tooltip_text("(%s:%s)" % (str(h).rjust(2, "0"), str(m).rjust(2, "0")))
 

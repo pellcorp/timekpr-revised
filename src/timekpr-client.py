@@ -439,7 +439,7 @@ class IndicatorTimekpr(object):
 
         # check if we have file, if not - exit
         if verified != True:
-            self.notifyUser(_('Can not read configuration, time left is unknown at the moment... Please wait a little for configuration to be initialized'), 'critical')
+            self.notifyUser(_('Can not read configuration, time left is unknown at the moment... Please wait a little for configuration to be initialized...'), 'normal')
             return True
 
         debug("%s: previous time: %d, new time: %d, check interval: %d" % (name, time, self.timeSpentPrev, 3*self.checkInterval-1))
@@ -515,6 +515,11 @@ class IndicatorTimekpr(object):
 
         # add call very shortly
         if firstInit != True:
+            # check if we are in gnome and issue a warning
+            if self.getSessionName().find("GNOME") > -1:
+                self.notifyUser(_('If You can not see Timekpr icon in the notification area and are using Gnome3, please install or ask Your supervisor to install TopIcons extension or similar to show the notification area icons!'), 'low')
+
+            # issue a first notification
             self.timerLevelInEffect = 1
             self.notifTimer = GLib.timeout_add_seconds(self.timerLevelInEffect, self.regularNotifier)
 

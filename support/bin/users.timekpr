@@ -38,7 +38,7 @@ then
 fi
 
 # now filter out DM's and improve the result
-TKPR_USERS="$(echo $TKPR_USERS | grep -v -e '^gdm$' -e '^kdm$' -e '^lxdm$' -e '^lightdm$')"
+TKPR_USERS="$(echo $TKPR_USERS | grep -v -e '^gdm$' -e '^kdm$' -e '^lightdm$' -e '^mdm$' -e '^lxdm$' -e '^sddm$')"
 
 # output final user list
 echo "$TKPR_USERS"

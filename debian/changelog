@@ -1,3 +1,13 @@
+timekpr (0.3.7~ppa1~ubuntu9) UNRELEASED; urgency=medium
+
+  * added SDDM (a display manager KDE uses by default) to supported list for Timekpr
+  * removed "(oops?)" from installation for less confusion (in case someone actually looks at it)
+  * added "unlimited" symbol to those users who are unlimited (better KDE compatibility as well, bc KDE shows program name when nothing is set)
+  * rework notification about missing configuration, now it better explains that this is not really as bad as it sounds
+  * added a warning for Gnome3 users to install topicons extension if Timekpr icon is not visible
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Mon, 1 Nov 2018 07:59:01 +0200
+
 timekpr (0.3.7~ppa1~ubuntu8) UNRELEASED; urgency=medium
 
   * improve KDE status icon compatibility (now there should be a text showing the time left)

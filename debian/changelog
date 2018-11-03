@@ -1,3 +1,9 @@
+timekpr (0.3.7~ppa1~ubuntu10) UNRELEASED; urgency=medium
+
+  * fixed a long standing bug with loginctl shows error messages like this "Failed to look up user USER: No such process", thanks goes to SanskritFritz from ArchLinux community who brought this up
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Mon, 3 Nov 2018 19:20:07 +0200
+
 timekpr (0.3.7~ppa1~ubuntu9) UNRELEASED; urgency=medium
 
   * added SDDM (a display manager KDE uses by default) to supported list for Timekpr

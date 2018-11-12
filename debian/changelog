@@ -1,3 +1,9 @@
+timekpr-beta (0.3.7~ppa1~ubuntu11) UNRELEASED; urgency=medium
+
+  * fixed #1802583 (Timekpr says that it can't initialize config)
+
+ -- Eduards Bezverhijs <edzis@inbox.lv>  Mon, 12 Nov 2018 09:02:50 +0200
+
 timekpr-beta (0.3.7~ppa1~ubuntu10) UNRELEASED; urgency=medium
 
   * fixed a long standing bug with loginctl shows error messages like this "Failed to look up user USER: No such process", thanks goes to SanskritFritz from ArchLinux community who brought this up
